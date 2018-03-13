@@ -1,0 +1,157 @@
+/*******************************/
+/***** HOME PAGE IMAGE MAP *****/
+/*******************************/
+#runningbg { margin:0; position:relative; width:100%; color:#34435e; background: url(images/bg.jpg) top repeat-x; text-align:center; }
+
+#map {position:relative; margin:auto; width:1024px; height:301px;  }
+#map ul {padding:0; margin:0; list-style:none; position:absolute; top:0; left:0;}
+#map ul li {position:absolute;}
+
+
+#map ul li#construction {
+	width:53px;
+	height:54px;
+	top:228px;
+	left:502px;
+	background-image:url(images/ping-construction.gif);
+	background-repeat: no-repeat;
+}
+
+#map ul li#length {
+	width:54px;
+	height:55px;
+	top:-1px;
+	left:684px;
+	background-image:url(images/ping-length.gif);
+	background-repeat:no-repeat;
+}
+#map ul li#delivery {
+	width:54px;
+	height:55px;
+	top:233px;
+	left:659px;
+	background-image:url(images/ping-delivery.gif);
+	background-repeat:no-repeat;
+}
+#map ul li#mods {
+	width:54px;
+	height:55px;
+	top:32px;
+	left:384px;
+	background-image:url(images/ping-mods.gif);
+	background-repeat:no-repeat;
+	
+}
+#map ul li#powered {
+	width:54px;
+	height:55px;
+	top:143px;
+	left:404px;
+	background-image:url(images/ping-powered.gif);
+	background-repeat:no-repeat;
+}
+
+#map ul li#materials {
+	width:54px;
+	height:55px;
+	top:107px;
+	left:887px;
+	background-image:url(images/ping-materials.gif);
+	background-repeat:no-repeat;
+}
+ 
+/* remove the absolute position from the list items for lte IE6 */
+* html #map ul li {position:static;}
+ 
+/* and give the absolute position to the links for lte IE6 */
+* html #map ul li a.tl {position:absolute;}
+* html #map ul li#construction a.tl {top:31px; left:63px;}
+* html #map ul li#length a.tl {top:77px; left:291px;}
+* html #map ul li#delivery a.tl {top:306px; left:130px;}
+* html #map ul li#mods a.tl {top:352px; left:346px;}
+* html #map ul li#powered a.tl {top:246px; left:435px;}
+ * html #map ul li#materials a.tl {top:246px; left:435px;}
+ 
+#map ul li a {text-decoration:none;}
+ 
+#map ul li a.tl {display:block; text-indent:-9999px; background: url(images/transparent.gif);}
+ 
+#map ul li a.tl:hover, #map ul li:hover {z-index:500;}
+ 
+#map ul li#construction a.tl {width:60px; height:60px;}
+/* #map ul li#construction a.tl:hover, #map ul li#construction:hover {background:url(images/ping-construction.gif); background-repeat:no-repeat;} */
+
+#map ul li#length a.tl {width:60px; height:60px;}
+/* #map ul li#length a.tl:hover, #map ul li#length:hover {background:url(images/ping-length.gif); background-repeat:no-repeat;} */
+
+#map ul li#delivery a.tl {width:60px; height:60px;}
+/* #map ul li#delivery a.tl:hover, #map ul li#delivery:hover {background:url(images/ping-delivery.gif); background-repeat:no-repeat;} */
+
+#map ul li#mods a.tl {width:60px; height:60px;}
+/* #map ul li#mods a.tl:hover, #map ul li#mods:hover {background:url(images/ping-mods.gif); background-repeat:no-repeat;} */
+
+#map ul li#powered a.tl {width:60px; height:60px;}
+/* #map ul li#powered a.tl:hover, #map ul li#powered:hover {background:url(images/ping-powered.gif); background-repeat:no-repeat;} */
+
+#map ul li#materials a.tl {width:60px; height:60px;}
+/* #map ul li#materials a.tl:hover, #map ul li#materials:hover {background:url(images/ping-materials.gif); background-repeat:no-repeat;} */
+ 
+ 
+ 
+#map ul li .xsnazzy,
+#map ul li a .xsnazzy
+{visibility:hidden;}
+ 
+/* For IE6 to work */
+* html #map ul li a.tl:hover {border:0;}
+ 
+* html #map ul li a:hover .xsnazzy {visibility:visible;}
+ 
+#map ul li:hover .xsnazzy {visibility:visible;}
+ 
+/* For IE7 to keep the :hover over .xsnazzy - goodness knows why? */
+#map ul li:hover .xsnazzy {background:url(images/transparent.gif);}
+ 
+.xsnazzy {display:block; position:absolute; height:auto; text-align:center;}
+ 
+ /*  these control the text boxes  */
+#construction .xsnazzy {left:-20px; top:-195px; width:300px;}
+#length .xsnazzy {left:-52px; top:30px; width:210px;}
+#delivery .xsnazzy {left:30px; top:-90px; width:250px;}
+#mods .xsnazzy {left:-305px; top:-45px; width:300px;}
+#powered .xsnazzy {left:-255px; top:-42px; width:250px;}
+#materials .xsnazzy {left:-311px; top:-45px; width:305px;}
+ 
+.xsnazzy h1, .xsnazzy p {margin:0 10px;}
+.xsnazzy h1 {font-size:0.9em; color: #252f42; font-family: Verdana, Geneva, sans-serif; border-bottom:1px solid #fff; padding-bottom:0.5em;}
+.xsnazzy p {padding-bottom:0.5em; color:#eee; font-size:12px; text-align:left;}
+.xsnazzy {background: transparent; margin:1em;}
+ 
+ 
+.xb1, .xb2, .xb3, .xb4, .xb5, .xb6, .xb7 {display:block; font-size:0; overflow:hidden;}
+.xb1, .xb2, .xb3, .xb4, .xb5, .xb6 {height:1px;}
+.xb4, .xb5, .xb6, .xb7 {background:#ccc; border-left:1px solid #fff; border-right:1px solid #fff;}
+.xb1 {margin:0 8px; background:#fff;}
+.xb2 {margin:0 6px; background:#fff;}
+.xb3 {margin:0 4px; background:#fff;}
+.xb4 {margin:0 3px; background:#7f7f9c; border-width:0 5px;}
+.xb5 {margin:0 2px; background:#7f7f9c; border-width:0 4px;}
+.xb6 {margin:0 2px; background:#7f7f9c; border-width:0 3px;} 
+.xb7 {margin:0 1px; background:#7f7f9c; border-width:0 3px; height:2px;} 
+ 
+.xboxcontent {display:block; background:#7f7f9c; border:3px solid #fff; border-width:0 3px;}
+.xboxcontent a, .xboxcontent a:visited {display:block; color:#fff; font-weight:bold; font-size:12px; text-indent:0; padding:4px;}
+ 
+#map ul li a:hover .xsnazzy .xboxcontent a:hover {color:#fff;}
+#map ul li:hover .xsnazzy .xboxcontent a:hover {color:#fff;}
+ 
+.xsnazzy em.point_top {display:block; font-size:0; width:25px; height:14px; background:url(images/point.gif) center top; position:absolute; left:50px; top:-11px;}
+.xsnazzy em.point_bottom {display:block; font-size:0; width:25px; height:14px; background:url(images/point.gif) center bottom; position:absolute; right:257px; bottom:-11px;}
+
+
+/* for IE5.5 */
+* html .xsnazzy em.point_bottom {bottom:-12px; bo\ttom:-11px;}
+.xsnazzy em.point_left {display:block; font-size:0; width:14px; height:25px; background:url(images/point.gif) left center; position:absolute; left:-11px; top:90px;}
+.xsnazzy em.point_right {display:block; font-size:0; width:14px; height:25px; background:url(images/point.gif) right center; position:absolute; right:-11px; top:43px;}
+/* for IE5.5 */
+* html .xsnazzy em.point_right {right:-12px; ri\ght:-11px;}

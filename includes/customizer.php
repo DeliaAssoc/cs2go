@@ -14,12 +14,6 @@ function forta_master_customizer( $wp_customize ) {
 	    'priority'    => 10,
 	    'description' => 'Enter company information',
 	) );
-	// Accent Color
-	$wp_customize->add_section( 'forta_master_color_section' , array(
-	    'title'       => __( 'Site Accent Color', 'forta_master' ),
-	    'priority'    => 30,
-	    'description' => 'Here you can adjust the site accent color',
-	) );
 	// Social Media
 	$wp_customize->add_section( 'forta_master_social_section' , array(
 	    'title'       => __( 'Social Media', 'forta_master' ),
@@ -60,6 +54,7 @@ function forta_master_customizer( $wp_customize ) {
 	$wp_customize->add_setting( 'forta_master_company_mark', array( 'default' => __( '' ), 'forta_master' ) );
 	// Company Information
 	$wp_customize->add_setting( 'forta_master_companyinfo_section', array( 'default' => __( '' ), 'forta_master' ) );
+	$wp_customize->add_setting( 'forta_master_company_email', array( 'default' => __( '' ), 'forta_master' ) );
 	$wp_customize->add_setting( 'forta_master_company_street', array( 'default' => __( '' ), 'forta_master' ) );
 	$wp_customize->add_setting( 'forta_master_company_city', array( 'default' => __( '' ), 'forta_master' ) );
 	$wp_customize->add_setting( 'forta_master_company_state', array( 'default' => __( '' ), 'forta_master' ) );
@@ -69,10 +64,16 @@ function forta_master_customizer( $wp_customize ) {
 	$wp_customize->add_setting( 'forta_master_company_phone', array( 'default' => __( '' ), 'forta_master' ) );
 	$wp_customize->add_setting( 'forta_master_company_tollfree', array( 'default' => __( '' ), 'forta_master' ) );
 	$wp_customize->add_setting( 'forta_master_company_fax', array( 'default' => __( '' ), 'forta_master' ) );
-	$wp_customize->add_setting( 'forta_master_company_email', array( 'default' => __( '' ), 'forta_master' ) );
+	$wp_customize->add_setting( 'forta_master_company_street2', array( 'default' => __( '' ), 'forta_master' ) );
+	$wp_customize->add_setting( 'forta_master_company_city2', array( 'default' => __( '' ), 'forta_master' ) );
+	$wp_customize->add_setting( 'forta_master_company_state2', array( 'default' => __( '' ), 'forta_master' ) );
+	$wp_customize->add_setting( 'forta_master_company_zip2', array( 'default' => __( '' ), 'forta_master' ) );
+	$wp_customize->add_setting( 'forta_master_company_country2', array( 'default' => __( '' ), 'forta_master' ) );
+	$wp_customize->add_setting( 'forta_master_company_gmap2', array( 'default' => __( '' ), 'forta_master' ) );
+	$wp_customize->add_setting( 'forta_master_company_phone2', array( 'default' => __( '' ), 'forta_master' ) );
+	$wp_customize->add_setting( 'forta_master_company_tollfree2', array( 'default' => __( '' ), 'forta_master' ) );
+	$wp_customize->add_setting( 'forta_master_company_fax2', array( 'default' => __( '' ), 'forta_master' ) );
 	$wp_customize->add_setting( 'forta_master_company_snippet', array( 'default' => __( '' ), 'forta_master' ) );
-	//  Accent Color
-	$wp_customize->add_setting( 'forta_master_accent_color', array( 'default' => '' ));
 	// Social Media
 	$wp_customize->add_setting( 'forta_master_social' );
 	$wp_customize->add_setting( 'forta_master_social_facebook_link', array( 'default' => __( '' ), 'forta_master' ) );
@@ -84,21 +85,6 @@ function forta_master_customizer( $wp_customize ) {
 	$wp_customize->add_setting( 'forta_master_social_pinterest_link', array( 'default' => __( '' ), 'forta_master' ) );
 	// Privacy Policy
 	$wp_customize->add_setting( 'forta_privacy_policy' );
-	// Page Banners
-	$wp_customize->add_setting( 'forta_master_page_banner_section' );
-	$wp_customize->add_setting( 'forta_master_post_product', array( 'default' => __( '' ), 'forta_master' ) );
-	$wp_customize->add_setting( 'forta_master_post_project', array( 'default' => __( '' ), 'forta_master' ) );
-	$wp_customize->add_setting( 'forta_master_post_events', array( 'default' => __( '' ), 'forta_master' ) );
-	$wp_customize->add_setting( 'forta_master_page_contact', array( 'default' => __( '' ), 'forta_master' ) );
-	$wp_customize->add_setting( 'forta_master_page_general', array( 'default' => __( '' ), 'forta_master' ) );
-	// Product Pages
-	$wp_customize->add_setting( 'forta_master_products' );
-	$wp_customize->add_setting( 'forta_master_products_image', array( 'default' => __( '' ), 'forta_master' ) );
-	$wp_customize->add_setting( 'forta_master_small_text', array( 'default' => __( '' ), 'forta_master' ) );
-	$wp_customize->add_setting( 'forta_master_large_top_text', array( 'default' => __( '' ), 'forta_master' ) );
-	$wp_customize->add_setting( 'forta_master_large_bottom_text', array( 'default' => __( '' ), 'forta_master' ) );
-	$wp_customize->add_setting( 'forta_master_button_text', array( 'default' => __( '' ), 'forta_master' ) );
-	$wp_customize->add_setting( 'forta_master_button_link', array( 'default' => __( '' ), 'forta_master' ) );
 
 	// Customizer Controls
 	// Company Logo
@@ -116,19 +102,19 @@ function forta_master_customizer( $wp_customize ) {
 	) ) );
 	// Company Information
 	$wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'forta_master_company_street', array(
-	    'label'    => __( 'Street Address', 'forta_master' ),
+	    'label'    => __( 'Location 1 Street Address', 'forta_master' ),
 	    'section'  => 'forta_master_companyinfo_section',
 	    'settings' => 'forta_master_company_street',
 	) ) );
 
 	$wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'forta_master_company_city', array(
-	    'label'    => __( 'City', 'forta_master' ),
+	    'label'    => __( 'Location 1 City', 'forta_master' ),
 	    'section'  => 'forta_master_companyinfo_section',
 	    'settings' => 'forta_master_company_city',
 	) ) );
 
 	$wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'forta_master_company_state', array(
-	    'label'    => __( 'State', 'forta_master' ),
+	    'label'    => __( 'Location 1 State', 'forta_master' ),
 	    'section'  => 'forta_master_companyinfo_section',
 	    'settings' => 'forta_master_company_state',
 	    'type'     => 'select',
@@ -187,40 +173,148 @@ function forta_master_customizer( $wp_customize ) {
 	) ) );
 
 	$wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'forta_master_company_zip', array(
-	    'label'    => __( 'Zip Code', 'forta_master' ),
+	    'label'    => __( 'Location 1 Zip Code', 'forta_master' ),
 	    'section'  => 'forta_master_companyinfo_section',
 	    'settings' => 'forta_master_company_zip',
 	) ) );
 
 	$wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'forta_master_company_country', array(
-	    'label'    => __( 'Country', 'forta_master' ),
+	    'label'    => __( 'Location 1 Country', 'forta_master' ),
 	    'section'  => 'forta_master_companyinfo_section',
 	    'settings' => 'forta_master_company_country',
 	) ) );
 
 	$wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'forta_master_company_gmap', array(
 		'description' => __( 'Paste the Google Code Snippet Here starting with &lt;iframe&gt;. Please replace width to 100% and have the height set to at least 300.' ),
-	    'label'    => __( 'Google Map', 'forta_master' ),
+	    'label'    => __( 'Location 1 Google Map', 'forta_master' ),
 	    'section'  => 'forta_master_companyinfo_section',
 	    'settings' => 'forta_master_company_gmap',
 	) ) );
 
 	$wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'forta_master_company_phone', array(
-	    'label'    => __( 'Local Phone', 'forta_master' ),
+	    'label'    => __( 'Location 1 Local Phone', 'forta_master' ),
 	    'section'  => 'forta_master_companyinfo_section',
 	    'settings' => 'forta_master_company_phone',
 	) ) );
 
 	$wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'forta_master_company_tollfree', array(
-	    'label'    => __( 'Toll Free Phone', 'forta_master' ),
+	    'label'    => __( 'Location 1 Toll Free Phone', 'forta_master' ),
 	    'section'  => 'forta_master_companyinfo_section',
 	    'settings' => 'forta_master_company_tollfree',
 	) ) );
 
 	$wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'forta_master_company_fax', array(
-	    'label'    => __( 'Fax', 'forta_master' ),
+	    'label'    => __( 'Location 1 Fax', 'forta_master' ),
 	    'section'  => 'forta_master_companyinfo_section',
 	    'settings' => 'forta_master_company_fax',
+	) ) );
+
+	$wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'forta_master_company_street2', array(
+	    'label'    => __( 'Location 2 Street Address', 'forta_master' ),
+	    'section'  => 'forta_master_companyinfo_section',
+	    'settings' => 'forta_master_company_street2',
+	) ) );
+
+	$wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'forta_master_company_city2', array(
+	    'label'    => __( 'Location 2 City', 'forta_master' ),
+	    'section'  => 'forta_master_companyinfo_section',
+	    'settings' => 'forta_master_company_city2',
+	) ) );
+
+	$wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'forta_master_company_state2', array(
+	    'label'    => __( 'Location 2 State', 'forta_master' ),
+	    'section'  => 'forta_master_companyinfo_section',
+	    'settings' => 'forta_master_company_state2',
+	    'type'     => 'select',
+	    'choices'  => array(
+	        'AL' => 'Alabama',
+	        'AK' => 'Alaska',
+	        'AZ' => 'Arizona',
+	        'AR' => 'Arkansas',
+	        'CA' => 'California',
+	        'CO' => 'Colorado',
+	        'CT' => 'Connecticut',
+	        'DE' => 'Delaware',
+	        'DC' => 'District of Columbia',
+	        'FL' => 'Florida',
+	        'GA' => 'Georgia',
+	        'HI' => 'Hawaii',
+	        'ID' => 'Idaho',
+	        'IL' => 'Illinois',
+	        'IN' => 'Indiana',
+	        'IA' => 'Iowa',
+	        'KS' => 'Kansas',
+	        'KY' => 'Kentucky',
+	        'LA' => 'Louisiana',
+	        'ME' => 'Maine',
+	        'MD' => 'Maryland',
+	        'MA' => 'Massachusetts',
+	        'MI' => 'Michigan',
+	        'MN' => 'Minnesota',
+	        'MS' => 'Mississippi',
+	        'MO' => 'Missouri',
+	        'MT' => 'Montana',
+	        'NE' => 'Nebraska',
+	        'NV' => 'Nevada',
+	        'NH' => 'New Hampshire',
+	        'NJ' => 'New Jersey',
+	        'NM' => 'New Mexico',
+	        'NY' => 'New York',
+	        'NC' => 'North Carolina',
+	        'ND' => 'North Dakota',
+	        'OH' => 'Ohio',
+	        'OK' => 'Oklahoma',
+	        'OR' => 'Oregon',
+	        'PA' => 'Pennsylvania',
+	        'RI' => 'Rhode Island',
+	        'SC' => 'South Carolina',
+	        'SD' => 'South Dakota',
+	        'TN' => 'Tennessee',
+	        'TX' => 'Texas',
+	        'UT' => 'Utah',
+	        'VT' => 'Vermont',
+	        'VA' => 'Virginia',
+	        'WA' => 'Washington',
+	        'WV' => 'West Virginia',
+	        'WI' => 'Wisconsin',
+	        'WY' => 'Wyoming' )
+	) ) );
+
+	$wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'forta_master_company_zip2', array(
+	    'label'    => __( 'Location 2 Zip Code', 'forta_master' ),
+	    'section'  => 'forta_master_companyinfo_section',
+	    'settings' => 'forta_master_company_zip2',
+	) ) );
+
+	$wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'forta_master_company_country2', array(
+	    'label'    => __( 'Location 2 Country', 'forta_master' ),
+	    'section'  => 'forta_master_companyinfo_section',
+	    'settings' => 'forta_master_company_country2',
+	) ) );
+
+	$wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'forta_master_company_gmap2', array(
+		'description' => __( 'Paste the Google Code Snippet Here starting with &lt;iframe&gt;. Please replace width to 100% and have the height set to at least 300.' ),
+	    'label'    => __( 'Location 2 Google Map', 'forta_master' ),
+	    'section'  => 'forta_master_companyinfo_section',
+	    'settings' => 'forta_master_company_gmap2',
+	) ) );
+
+	$wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'forta_master_company_phone2', array(
+	    'label'    => __( 'Location 2 Local Phone', 'forta_master' ),
+	    'section'  => 'forta_master_companyinfo_section',
+	    'settings' => 'forta_master_company_phone2',
+	) ) );
+
+	$wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'forta_master_company_tollfree2', array(
+	    'label'    => __( 'Location 2 Toll Free Phone', 'forta_master' ),
+	    'section'  => 'forta_master_companyinfo_section',
+	    'settings' => 'forta_master_company_tollfree2',
+	) ) );
+
+	$wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'forta_master_company_fax2', array(
+	    'label'    => __( 'Location 2 Fax', 'forta_master' ),
+	    'section'  => 'forta_master_companyinfo_section',
+	    'settings' => 'forta_master_company_fax2',
 	) ) );
 
 	$wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'forta_master_company_email', array(
@@ -277,82 +371,6 @@ function forta_master_customizer( $wp_customize ) {
 	    'label'    => __( 'Pinterest Link', 'forta_master' ),
 	    'section'  => 'forta_master_social_section',
 	    'settings' => 'forta_master_social_pinterest_link',
-	) ) );
-
-	$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'forta_master_accent_color', array(
-	'label'      => __( 'Accent Color', 'forta_master' ),
-	'section'    => 'forta_master_color_section',
-	'settings'   => 'forta_master_accent_color',
-	) ) );
-
-	// Page Banners
-	$wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'forta_master_page_general', array(
-		'description' => __( 'Upload Image here' ),
-	    'label'    => __( 'General Page', 'forta_master' ),
-	    'section'  => 'forta_master_page_banner_section',
-	    'settings' => 'forta_master_page_general',
-	) ) );
-	$wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'forta_master_post_product', array(
-		'description' => __( 'Upload Image here' ),
-	    'label'    => __( 'Single Product Pages', 'forta_master' ),
-	    'section'  => 'forta_master_page_banner_section',
-	    'settings' => 'forta_master_post_product',
-	) ) );
-	$wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'forta_master_post_project', array(
-		'description' => __( 'Upload Image here' ),
-	    'label'    => __( 'Single Project Pages', 'forta_master' ),
-	    'section'  => 'forta_master_page_banner_section',
-	    'settings' => 'forta_master_post_project',
-	) ) );
-	$wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'forta_master_page_contact', array(
-		'description' => __( 'Upload Image here' ),
-	    'label'    => __( 'Contact Page', 'forta_master' ),
-	    'section'  => 'forta_master_page_banner_section',
-	    'settings' => 'forta_master_page_contact',
-	) ) );
-	$wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'forta_master_post_events', array(
-		'description' => __( 'Upload Image here' ),
-	    'label'    => __( 'Single Event Pages', 'forta_master' ),
-	    'section'  => 'forta_master_page_banner_section',
-	    'settings' => 'forta_master_post_events',
-	) ) );
-
-	// Product Pages
-	$wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'forta_master_products_image', array(
-		'description' => __( 'Upload the image that will be used as the background' ),
-	    'label'    => __( 'Call To Action Image', 'forta_master' ),
-	    'section'  => 'forta_master_product_section',
-	    'settings' => 'forta_master_products_image',
-	) ) );
-
-	$wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'forta_master_small_text', array(
-	    'label'    => __( 'Call To Action Small Text', 'forta_master' ),
-	    'section'  => 'forta_master_product_section',
-	    'settings' => 'forta_master_small_text',
-	) ) );
-
-	$wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'forta_master_large_top_text', array(
-	    'label'    => __( 'Call To Action Large Text 1st Line', 'forta_master' ),
-	    'section'  => 'forta_master_product_section',
-	    'settings' => 'forta_master_large_top_text',
-	) ) );
-
-	$wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'forta_master_large_bottom_text', array(
-	    'label'    => __( 'Call To Action Large Text 2nd Line', 'forta_master' ),
-	    'section'  => 'forta_master_product_section',
-	    'settings' => 'forta_master_large_bottom_text',
-	) ) );
-
-	$wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'forta_master_button_text', array(
-	    'label'    => __( 'Call To Action Button Text', 'forta_master' ),
-	    'section'  => 'forta_master_product_section',
-	    'settings' => 'forta_master_button_text',
-	) ) );
-
-	$wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'forta_master_button_link', array(
-	    'label'    => __( 'Call To Action Button Link', 'forta_master' ),
-	    'section'  => 'forta_master_product_section',
-	    'settings' => 'forta_master_button_link',
 	) ) );
 
 	// Privacy Policy

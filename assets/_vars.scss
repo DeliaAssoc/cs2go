@@ -3,12 +3,9 @@
 // ---------------------------------------------------
 
 
-$white-color: #FFFFFF;
-$black-color: #000000;
-$grayish: #ebebec;
-$lt-gray: rgba( 234, 234, 234, 1 );
-$md-gray: rgba( 88, 89, 91, 1 );
-$darkest: rgba( 51, 51, 51, 1 );
+$lightest: #FFFFFF;
+$darkest: #000000;
+$accent: #004080;
 $blackish: #231f20;
 
 // ---------------------------------------------------
@@ -24,9 +21,8 @@ $med-shadow: 0 1px 1px rgba(0,0,0,0.35);
 //    Typography
 // ---------------------------------------------------
 
-$font-color: #6d6f71;
-$robo-font: 'Roboto', Helvetica, Arial, sans-serif;
-$rale-font: 'Raleway', Helvetica, Arial, sans-serif;
+$font-color: #34435e;
+$robo: 'Roboto', Helvetica, Arial, sans-serif;
 $fa: 'FontAwesome', sans-serif;
 
 
