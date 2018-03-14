@@ -258,23 +258,6 @@ th {
 /*--------------------------------------------------------------
 # Site Helper Classes
 --------------------------------------------------------------*/
-.site {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  min-height: 100vh;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
-}
-
-.site-content {
-  -webkit-box-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-}
-
 .constrain {
   display: block;
   padding: 0 10px;
@@ -377,6 +360,11 @@ big {
   font-size: 125%;
 }
 
+h1 {
+  line-height: 1.1em;
+  text-transform: uppercase;
+}
+
 /*--------------------------------------------------------------
 # Elements
 --------------------------------------------------------------*/
@@ -473,7 +461,7 @@ table {
 }
 
 body {
-  color: #7C7C7C;
+  color: #34435e;
   line-height: 1.65em;
 }
 
@@ -768,7 +756,7 @@ a:active {
 .page-content,
 .entry-content,
 .entry-summary {
-  margin: 1.5em 0 0;
+  margin: 0;
 }
 
 .page-links {
@@ -782,22 +770,31 @@ a:active {
 /*--------------------------------------------------------------
 # Main Content Layout Classes
 --------------------------------------------------------------*/
-body {
-  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#2b78bc+0,ffffff+87 */
-  background: #2b78bc;
-  /* Old browsers */
-  background: -moz-linear-gradient(top, #2b78bc 0%, #ffffff 87%);
-  /* FF3.6-15 */
-  background: -webkit-linear-gradient(top, #2b78bc 0%, #ffffff 87%);
-  /* Chrome10-25,Safari5.1-6 */
-  background: linear-gradient(to bottom, #2b78bc 0%, #ffffff 87%);
-  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2b78bc', endColorstr='#ffffff',GradientType=0 );
-  /* IE6-9 */
-}
-
 body.home {
   background: #004080;
+}
+
+.site-content {
+  background-image: url("images/bg.jpg");
+  background-position: left top;
+  background-repeat: repeat-x;
+}
+.site-content .constrain {
+  overflow: hidden;
+}
+
+.entry-content {
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 10px;
+  margin: 0 0 20px 0;
+  padding: 5px;
+}
+
+.sidebar {
+  background-color: #FFFFFF;
+  border: 3px solid #004080;
+  border-radius: 10px;
+  margin: 0 0 20px 0;
 }
 
 .homepage-map {
@@ -811,6 +808,20 @@ body.home {
 .homepage-about {
   background-color: #004080;
   display: none;
+}
+
+.snow .constrain {
+  background-image: url("images/snow-graphic.png");
+  background-position: top left;
+  background-repeat: no-repeat;
+  padding: 20px 10px 0;
+}
+
+.page-template-contact .sidebar {
+  background-color: transparent;
+  border: none;
+  border-radius: 0;
+  margin: 0 0 20px 0;
 }
 
 /*--------------------------------------------------------------
@@ -829,6 +840,7 @@ body.home {
 --------------------------------------------------------------*/
 .site-footer {
   background-color: #004080;
+  clear: both;
   color: #cde6ff;
   padding: 10px 0;
 }
@@ -954,6 +966,16 @@ object {
 }
 
 @media only screen and (min-width: 768px) {
+  .entry-content {
+    float: left;
+    width: 72%;
+  }
+
+  .sidebar {
+    float: right;
+    width: 25%;
+  }
+
   .site-branding {
     float: left;
     height: 100px;
@@ -990,12 +1012,16 @@ object {
     justify-content: space-around;
   }
   .main-navigation ul li {
+    font-size: 13px;
     position: relative;
     text-transform: uppercase;
   }
   .main-navigation ul li:hover > .sub-menu {
     height: auto;
     display: block !important;
+  }
+  .main-navigation .sub-menu {
+    border: 1px solid #ccc;
   }
   .main-navigation a {
     color: #FFFFFF;
@@ -1007,7 +1033,7 @@ object {
   .sub-menu {
     background-color: #FFFFFF;
     border-bottom: 1px solid #ccc;
-    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15);
+    box-shadow: 1px 1px 7px 1px rgba(0, 0, 0, 0.07);
     display: none !important;
     margin: 0;
     padding: 0 0 0 40px;
@@ -1024,7 +1050,7 @@ object {
     border: 0;
   }
   .sub-menu a {
-    color: #7C7C7C;
+    color: #7c7c7c;
   }
   .sub-menu a:hover {
     color: #cc0000;
@@ -1079,6 +1105,11 @@ object {
     margin: 0;
   }
 }
+@media only screen and (min-width: 860px) {
+  .entry-content {
+    padding: 10px;
+  }
+}
 @media only screen and (min-width: 960px) {
   .site-branding,
   .header-boasts {
@@ -1087,6 +1118,15 @@ object {
   .site-branding img,
   .header-boasts img {
     height: 150px;
+  }
+
+  .main-navigation ul li {
+    font-size: 15px;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .entry-content {
+    padding: 20px;
   }
 }
 @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {

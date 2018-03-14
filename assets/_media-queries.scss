@@ -1,5 +1,15 @@
 @media only screen and ( min-width: 768px ) {
-   
+
+    .entry-content {
+        float: left;
+        width: 72%;
+    }
+
+    .sidebar {
+        float: right;
+        width: 25%;
+    }
+
     // HEADER
     .site-branding {
         float: left;
@@ -40,6 +50,7 @@
         }
 
         ul li {
+            font-size: 13px;
             position: relative;
             text-transform: uppercase;
 
@@ -47,6 +58,10 @@
                 height: auto;
                 display: block !important;
             }
+        }
+
+        .sub-menu {
+            border: 1px solid #ccc;
         }
 
         a {
@@ -80,7 +95,7 @@
         }
 
         a {
-            color: $font-color;
+            color: #7c7c7c;
 
             &:hover {
                 color: $hover;
@@ -92,10 +107,6 @@
     .homepage-map {
         display: block;
     }
-
-    // #contenth {
-    //     height: 300px;
-    // }
 
     .mobile-video {
         display: none;
@@ -148,6 +159,13 @@
     }
 }
 
+@media only screen and ( min-width: 860px ) {
+
+    .entry-content {
+        padding: 10px;
+    }
+}
+
 @media only screen and ( min-width: 960px ) {
 
     // HEADER
@@ -158,5 +176,19 @@
         img {
             height: 150px;
         }
+    }
+
+    .main-navigation {
+
+        ul li {
+            font-size: 15px;
+        }
+    }
+}
+
+@media only screen and ( min-width: 1024px ) {
+
+    .entry-content {
+        padding: 20px;
     }
 }

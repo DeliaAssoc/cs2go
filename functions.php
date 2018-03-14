@@ -106,18 +106,31 @@ add_action( 'after_setup_theme', 'cs2g_content_width', 0 );
  *
  * @link https://developer.wordpress.org/themes/functionality/sidebars/#registering-a-sidebar
  */
-function cs2g_widgets_init() {
-	register_sidebar( array(
-		'name'          => esc_html__( 'Sidebar', 'cs2g' ),
-		'id'            => 'sidebar-1',
-		'description'   => esc_html__( 'Add widgets here.', 'cs2g' ),
-		'before_widget' => '<section id="%1$s" class="widget %2$s">',
-		'after_widget'  => '</section>',
-		'before_title'  => '<h2 class="widget-title">',
-		'after_title'   => '</h2>',
-	) );
+// Register Sidebars
+function cs2g_sidebars() {
+
+	$args = array(
+		'id'            => 'default',
+		'class'         => 'default',
+		'name'          => __( 'Default Page Sidebar Area', 'text_domain' ),
+		'description'   => __( 'Widget area for Default Template Pages', 'text_domain' ),
+		'before_widget' => '',
+		'after_widget'  => '',
+	);
+	register_sidebar( $args );
+
+	$args = array(
+		'id'            => 'contact',
+		'class'         => 'contact',
+		'name'          => __( 'Contact Page Sidebar Area', 'text_domain' ),
+		'description'   => __( 'Widget area for Contact Template Pages', 'text_domain' ),
+		'before_widget' => '',
+		'after_widget'  => '',
+	);
+	register_sidebar( $args );
+
 }
-add_action( 'widgets_init', 'cs2g_widgets_init' );
+add_action( 'widgets_init', 'cs2g_sidebars' );
 
 /**
  * Enqueue scripts and styles.

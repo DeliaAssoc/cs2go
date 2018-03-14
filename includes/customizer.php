@@ -42,7 +42,9 @@ function cs2g_customizer( $wp_customize ) {
 	$wp_customize->add_setting( 'cs2g_footer_logo', array( 'default' => __( '' ), 'cs2g' ) );
 	// Company Information
 	$wp_customize->add_setting( 'cs2g_companyinfo_section', array( 'default' => __( '' ), 'cs2g' ) );
+	$wp_customize->add_setting( 'cs2g_company_email_image', array( 'default' => __( '' ), 'cs2g' ) );
 	$wp_customize->add_setting( 'cs2g_company_email', array( 'default' => __( '' ), 'cs2g' ) );
+	$wp_customize->add_setting( 'cs2g_company_address_image', array( 'default' => __( '' ), 'cs2g' ) );
 	$wp_customize->add_setting( 'cs2g_company_street', array( 'default' => __( '' ), 'cs2g' ) );
 	$wp_customize->add_setting( 'cs2g_company_city', array( 'default' => __( '' ), 'cs2g' ) );
 	$wp_customize->add_setting( 'cs2g_company_state', array( 'default' => __( '' ), 'cs2g' ) );
@@ -50,6 +52,7 @@ function cs2g_customizer( $wp_customize ) {
 	$wp_customize->add_setting( 'cs2g_company_country', array( 'default' => __( '' ), 'cs2g' ) );
 	$wp_customize->add_setting( 'cs2g_company_gmap', array( 'default' => __( '' ), 'cs2g' ) );
 	$wp_customize->add_setting( 'cs2g_company_phone', array( 'default' => __( '' ), 'cs2g' ) );
+	$wp_customize->add_setting( 'cs2g_company_tollfree_image', array( 'default' => __( '' ), 'cs2g' ) );
 	$wp_customize->add_setting( 'cs2g_company_tollfree', array( 'default' => __( '' ), 'cs2g' ) );
 	$wp_customize->add_setting( 'cs2g_company_fax', array( 'default' => __( '' ), 'cs2g' ) );
 	$wp_customize->add_setting( 'cs2g_company_street2', array( 'default' => __( '' ), 'cs2g' ) );
@@ -88,7 +91,15 @@ function cs2g_customizer( $wp_customize ) {
 	    'section'  => 'cs2g_logo_section',
 	    'settings' => 'cs2g_footer_logo',
 	) ) );
+	
 	// Company Information
+	$wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'cs2g_company_address_image', array(
+		'description' => __( 'Upload Address Image' ),
+	    'label'    => __( 'Contact Address Image', 'cs2g' ),
+	    'section'  => 'cs2g_companyinfo_section',
+	    'settings' => 'cs2g_company_tollfree_image',
+	) ) );
+
 	$wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'cs2g_company_street', array(
 	    'label'    => __( 'Location 1 Street Address', 'cs2g' ),
 	    'section'  => 'cs2g_companyinfo_section',
@@ -183,6 +194,13 @@ function cs2g_customizer( $wp_customize ) {
 	    'label'    => __( 'Location 1 Local Phone', 'cs2g' ),
 	    'section'  => 'cs2g_companyinfo_section',
 	    'settings' => 'cs2g_company_phone',
+	) ) );
+
+	$wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'cs2g_company_tollfree_image', array(
+		'description' => __( 'Upload Tollfree Phone Image' ),
+	    'label'    => __( 'Contact Tollfree Image', 'cs2g' ),
+	    'section'  => 'cs2g_companyinfo_section',
+	    'settings' => 'cs2g_company_tollfree_image',
 	) ) );
 
 	$wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'cs2g_company_tollfree', array(
@@ -303,6 +321,13 @@ function cs2g_customizer( $wp_customize ) {
 	    'label'    => __( 'Location 2 Fax', 'cs2g' ),
 	    'section'  => 'cs2g_companyinfo_section',
 	    'settings' => 'cs2g_company_fax2',
+	) ) );
+
+	$wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'cs2g_company_email_image', array(
+		'description' => __( 'Upload Email Image' ),
+	    'label'    => __( 'Contact Email Image', 'cs2g' ),
+	    'section'  => 'cs2g_companyinfo_section',
+	    'settings' => 'cs2g_company_email_image',
 	) ) );
 
 	$wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'cs2g_company_email', array(
