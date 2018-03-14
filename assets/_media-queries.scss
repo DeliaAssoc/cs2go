@@ -88,12 +88,40 @@
         }
     }
 
+    // HOMEPAGE
     .homepage-map {
         display: block;
     }
 
+    // #contenth {
+    //     height: 300px;
+    // }
+
     .mobile-video {
         display: none;
+    }
+
+    .homepage-about {
+        color: $lightest;
+        display: block;
+
+        .constrain {
+            background-image: url( 'http://localhost/cs2go/wp-content/uploads/2018/03/homepage-about-bg.png' );
+            background-position: right top;
+            background-repeat: no-repeat;
+            border-bottom: 3px solid $lightest;
+            height: auto;
+            position: relative;
+            top: 0;
+            width: 1024px;
+        }
+    }
+
+    .company-snippet {
+        font-size: 13px;
+        line-height: 1.3rem;
+        padding: 15px 0;
+        width: 515px;
     }
 
     // FOOTER

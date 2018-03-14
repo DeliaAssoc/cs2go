@@ -17,7 +17,7 @@ get_header();
                 <div id="runningbg"> 
                     <div id="contenth"> 
                         <div id="map">
-                            <img src="wp-content/uploads/2018/03/main_03.jpg" alt="" border="0" usemap="#Map" title="" style="padding:0px; margin:0px; vertical-align:bottom;">
+                            <img src="wp-content/uploads/2018/03/main_03b.jpg" alt="" border="0" usemap="#Map" title="" style="padding:0px; margin:0px; vertical-align:bottom;">
                             <map name="Map" id="Map">
                             <area shape="rect" coords="62,87,291,215" href="video.php" target="_self" alt="quote">
                             </map>
@@ -136,7 +136,14 @@ get_header();
                 <div class="constrain">
                     <iframe src="//player.vimeo.com/video/76904696?autoplay=1" width="574" style="border: none; margin-top: 30px; margin-bottom: 50px;" id="videobox"></iframe>
                 </div>
-            </section>
+            </section><!-- .mobile-video -->
+            <section class="homepage-about">
+                <div class="constrain">
+                    <div class="company-snippet">
+                        <?php echo get_theme_mod( 'cs2g_company_snippet' ); ?>
+                    </div>
+                </div><!-- .constrain -->
+            </section><!-- .homepage-about -->
 
 		</main><!-- #main -->
 	</div><!-- #primary -->

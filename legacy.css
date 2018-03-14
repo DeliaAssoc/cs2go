@@ -20,7 +20,7 @@
 #map ul li#length {
 	width:54px;
 	height:55px;
-	top:-1px;
+	top:0;
 	left:684px;
 	background-image:url(images/ping-length.gif);
 	background-repeat:no-repeat;
@@ -28,7 +28,7 @@
 #map ul li#delivery {
 	width:54px;
 	height:55px;
-	top:233px;
+	top:234px;
 	left:659px;
 	background-image:url(images/ping-delivery.gif);
 	background-repeat:no-repeat;

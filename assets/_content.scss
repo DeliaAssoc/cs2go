@@ -11,10 +11,19 @@ body {
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2b78bc', endColorstr='#ffffff',GradientType=0 ); /* IE6-9 */
 }
 
+body.home {
+    background: #004080;
+}
+
 .homepage-map {
     display: none;
 }
 
 .mobile-video {
     text-align: center;
+}
+
+.homepage-about {
+    background-color: $accent;
+    display: none;
 }

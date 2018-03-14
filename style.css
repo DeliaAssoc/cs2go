@@ -796,12 +796,21 @@ body {
   /* IE6-9 */
 }
 
+body.home {
+  background: #004080;
+}
+
 .homepage-map {
   display: none;
 }
 
 .mobile-video {
   text-align: center;
+}
+
+.homepage-about {
+  background-color: #004080;
+  display: none;
 }
 
 /*--------------------------------------------------------------
@@ -1027,6 +1036,28 @@ object {
 
   .mobile-video {
     display: none;
+  }
+
+  .homepage-about {
+    color: #FFFFFF;
+    display: block;
+  }
+  .homepage-about .constrain {
+    background-image: url("http://localhost/cs2go/wp-content/uploads/2018/03/homepage-about-bg.png");
+    background-position: right top;
+    background-repeat: no-repeat;
+    border-bottom: 3px solid #FFFFFF;
+    height: auto;
+    position: relative;
+    top: 0;
+    width: 1024px;
+  }
+
+  .company-snippet {
+    font-size: 13px;
+    line-height: 1.3rem;
+    padding: 15px 0;
+    width: 515px;
   }
 
   .site-footer .flexxed {
