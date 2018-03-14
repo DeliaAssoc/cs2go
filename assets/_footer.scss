@@ -21,4 +21,11 @@
 .comp-info {
     line-height: 1.35rem;
     margin: 0 0 10px 0;
+
+    iframe {
+        margin: 0 0 0 10px;
+        position: relative;
+        top: 7px;
+        width: 68px !important;
+    }
 }

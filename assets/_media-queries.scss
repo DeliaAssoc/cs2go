@@ -95,6 +95,29 @@
     .mobile-video {
         display: none;
     }
+
+    // FOOTER
+    .site-footer {
+
+        .flexxed {
+            -webkit-box-orient: horizontal;
+            -webkit-box-direction: normal;
+                -ms-flex-direction: row;
+                    flex-direction: row;
+            -webkit-box-pack: justify;
+                -ms-flex-pack: justify;
+                    justify-content: space-between;
+        }
+    }
+
+    .site-info {
+        text-align: right;
+    }
+
+    .address-one,
+    .address-two {
+        margin: 0;
+    }
 }
 
 @media only screen and ( min-width: 960px ) {

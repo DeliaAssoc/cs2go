@@ -841,6 +841,12 @@ body {
   line-height: 1.35rem;
   margin: 0 0 10px 0;
 }
+.comp-info iframe {
+  margin: 0 0 0 10px;
+  position: relative;
+  top: 7px;
+  width: 68px !important;
+}
 
 /*--------------------------------------------------------------
 # Media
@@ -1022,6 +1028,25 @@ object {
   .mobile-video {
     display: none;
   }
+
+  .site-footer .flexxed {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+  }
+
+  .site-info {
+    text-align: right;
+  }
+
+  .address-one,
+  .address-two {
+    margin: 0;
+  }
 }
 @media only screen and (min-width: 960px) {
   .site-branding,
@@ -1031,5 +1056,11 @@ object {
   .site-branding img,
   .header-boasts img {
     height: 150px;
+  }
+}
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  .site {
+    min-height: auto;
+    height: 100vh;
   }
 }
