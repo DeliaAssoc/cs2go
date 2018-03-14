@@ -132,6 +132,11 @@ get_header();
                     </div><!-- #contenth -->      
                 </div><!-- #runningbg -->
             </section><!-- .homepage-map -->
+            <section class="mobile-video">
+                <div class="constrain">
+                    <iframe src="//player.vimeo.com/video/76904696?autoplay=1" width="574" style="border: none; margin-top: 30px; margin-bottom: 50px;" id="videobox"></iframe>
+                </div>
+            </section>
 
 		</main><!-- #main -->
 	</div><!-- #primary -->

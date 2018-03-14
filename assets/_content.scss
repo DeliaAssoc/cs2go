@@ -1,3 +1,20 @@
 /*--------------------------------------------------------------
 # Main Content Layout Classes
 --------------------------------------------------------------*/
+
+body {
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#2b78bc+0,ffffff+87 */
+    background: #2b78bc; /* Old browsers */
+    background: -moz-linear-gradient(top, #2b78bc 0%, #ffffff 87%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, #2b78bc 0%,#ffffff 87%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, #2b78bc 0%,#ffffff 87%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2b78bc', endColorstr='#ffffff',GradientType=0 ); /* IE6-9 */
+}
+
+.homepage-map {
+    display: none;
+}
+
+.mobile-video {
+    text-align: center;
+}

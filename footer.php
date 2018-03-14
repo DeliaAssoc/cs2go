@@ -14,19 +14,27 @@
 	</div><!-- #content -->
 
 	<footer id="colophon" class="site-footer">
-		<div class="site-info">
-			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'cs2g' ) ); ?>">
-				<?php
-				/* translators: %s: CMS name, i.e. WordPress. */
-				printf( esc_html__( 'Proudly powered by %s', 'cs2g' ), 'WordPress' );
-				?>
-			</a>
-			<span class="sep"> | </span>
-				<?php
-				/* translators: 1: Theme name, 2: Theme author. */
-				printf( esc_html__( 'Theme: %1$s by %2$s.', 'cs2g' ), 'cs2g', '<a href="http://Delianet.com">John Horoszewski - Delia Assocaites</a>' );
-				?>
-		</div><!-- .site-info -->
+		<div class="constrain">
+			<div class="footer-logo">
+				<a href="/">
+					<img src="<?php echo get_theme_mod( 'cs2g_footer_logo' ); ?>" alt="">
+				</a>
+			</div>
+			<div class="site-info">
+			
+				<div class="footer-email comp-info">
+					Email: <a href="mailto:<?php echo get_theme_mod( 'cs2g_company_email' ); ?>"><?php echo get_theme_mod( 'cs2g_company_email' ); ?></a>
+				</div>
+				<div class="address-one comp-info">
+					<?php echo get_bloginfo( 'name' ); ?> | <?php echo get_theme_mod( 'cs2g_company_street' ); ?> | <?php echo get_theme_mod( 'cs2g_company_city' ); ?>, <?php echo get_theme_mod( 'cs2g_company_state' ); ?> <?php echo get_theme_mod( 'cs2g_company_zip' ); ?> | Phone: <a href="tel:<?php echo get_theme_mod( 'cs2g_company_phone2' ); ?>"><?php echo get_theme_mod( 'cs2g_company_phone' ); ?></a>
+				</div>
+				<div class="address-two comp-info">
+					<?php echo get_bloginfo( 'name' ); ?> | <?php echo get_theme_mod( 'cs2g_company_street2' ); ?> | <?php echo get_theme_mod( 'cs2g_company_city2' ); ?>, <?php echo get_theme_mod( 'cs2g_company_state2' ); ?> <?php echo get_theme_mod( 'cs2g_company_zip2' ); ?> | Phone: <a href="tel:<?php echo get_theme_mod( 'cs2g_company_phone2' ); ?>"><?php echo get_theme_mod( 'cs2g_company_phone2' ); ?></a>
+				</div>
+			
+
+			</div><!-- .site-info -->
+		</div><!-- .constrain -->
 	</footer><!-- #colophon -->
 </div><!-- #page -->
 

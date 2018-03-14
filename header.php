@@ -25,32 +25,23 @@
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'cs2g' ); ?></a>
 
 	<header id="masthead" class="site-header">
-		<div class="site-branding">
-			<?php
-			the_custom_logo();
-			if ( is_front_page() && is_home() ) :
-				?>
-				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-				<?php
-			else :
-				?>
-				<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
-				<?php
-			endif;
-			$cs2g_description = get_bloginfo( 'description', 'display' );
-			if ( $cs2g_description || is_customize_preview() ) :
-				?>
-				<p class="site-description"><?php echo $cs2g_description; /* WPCS: xss ok. */ ?></p>
-			<?php endif; ?>
-		</div><!-- .site-branding -->
-
+		<div class="constrain">
+			<div class="site-branding">
+				<div class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><img src="<?php echo get_theme_mod( 'cs2g_logo' ); ?>" /><div class="site-name"><?php bloginfo( 'name' ); ?></div></a></div>
+			</div><!-- .site-branding -->
+			<div class="header-boasts">
+				<img src="<?php echo esc_url( home_url( '/' ) ); ?>wp-content/uploads/2018/03/main_02.jpg" alt="">
+			</div><!-- .header-boasts -->
+		</div><!-- .constrain -->
 		<nav id="site-navigation" class="main-navigation">
+			<div class="constrain">
 			<?php
 			wp_nav_menu( array(
 				'theme_location' => 'menu-1',
 				'menu_id'        => 'primary-menu',
 			) );
 			?>
+			</div><!-- .constrain -->
 		</nav><!-- #site-navigation -->
 	</header><!-- #masthead -->
 
