@@ -97,7 +97,7 @@ function cs2g_customizer( $wp_customize ) {
 		'description' => __( 'Upload Address Image' ),
 	    'label'    => __( 'Contact Address Image', 'cs2g' ),
 	    'section'  => 'cs2g_companyinfo_section',
-	    'settings' => 'cs2g_company_tollfree_image',
+	    'settings' => 'cs2g_company_address_image',
 	) ) );
 
 	$wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'cs2g_company_street', array(

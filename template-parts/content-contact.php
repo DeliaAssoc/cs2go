@@ -18,36 +18,54 @@
             ?>
             
             <?php if ( get_theme_mod( 'cs2g_company_tollfree' ) ) : ?>
-                <div class="contact-info-block tollfree">
-                    <?php echo get_theme_mod( 'cs2g_company_tollfree' ); ?>   
+                <div class="contact-info-block">
+                    <div class="contact-block-image">
+                        <img src="<?php echo get_theme_mod( 'cs2g_company_tollfree_image' ); ?> " alt="">
+                    </div>
+                    <div class="text-block phone">
+                        <a href="tel:<?php echo get_theme_mod( 'cs2g_company_tollfree' ); ?>"><?php echo get_theme_mod( 'cs2g_company_tollfree' ); ?></a>
+                    </div>
                 </div>
             <?php endif; ?>
 
            <?php if ( get_theme_mod( 'cs2g_company_email' ) ) : ?>
-                <div class="contact-info-block email">
-                    <?php echo get_theme_mod( 'cs2g_company_email' ); ?>   
+                <div class="contact-info-block">
+                    <div class="contact-block-image">
+                        <img src="<?php echo get_theme_mod( 'cs2g_company_email_image' ); ?> " alt="">
+                    </div>
+                    <div class="text-block email">
+                        <a href="mailto:<?php echo get_theme_mod( 'cs2g_company_email' ); ?>"><?php echo get_theme_mod( 'cs2g_company_email' ); ?></a>
+                    </div> 
                 </div>
             <?php endif; ?>
 
            <?php if ( get_theme_mod( 'cs2g_company_street' ) ) : ?>
-                <div class="contact-info-block location-one">
-                    <?php echo get_theme_mod( 'cs2g_company_street' ); ?>
-                    <?php echo get_theme_mod( 'cs2g_company_city' ); ?>
-                    <?php echo get_theme_mod( 'cs2g_company_state' ); ?>
-                    <?php echo get_theme_mod( 'cs2g_company_zip' ); ?>
-                    Phone: <?php echo get_theme_mod( 'cs2g_company_phone' ); ?>
-                    Fax: <?php echo get_theme_mod( 'cs2g_company_fax' ); ?>
-                </div>
-            <?php endif; ?>
-
-            <?php if ( get_theme_mod( 'cs2g_company_street2' ) ) : ?>
-                <div class="contact-info-block location-two">
-                    <?php echo get_theme_mod( 'cs2g_company_street2' ); ?>
-                    <?php echo get_theme_mod( 'cs2g_company_city2' ); ?>
-                    <?php echo get_theme_mod( 'cs2g_company_state2' ); ?>
-                    <?php echo get_theme_mod( 'cs2g_company_zip2' ); ?>
-                    Phone: <?php echo get_theme_mod( 'cs2g_company_phone2' ); ?>
-                    Fax: <?php echo get_theme_mod( 'cs2g_company_fax2' ); ?>
+                <div class="contact-info-block locations">
+                    <div class="contact-block-image">
+                        <img src="<?php echo get_theme_mod( 'cs2g_company_address_image' ); ?> " alt="">
+                    </div>
+                    <div class="text-block">
+                        <div class="location">
+                            <div class="contact-text-item"><?php echo get_bloginfo( 'name' ); ?></div>
+                            <div class="contact-text-item"><?php echo get_theme_mod( 'cs2g_company_street' ); ?></div>
+                            <div class="contact-text-item"><?php echo get_theme_mod( 'cs2g_company_city' ); ?>
+                            <?php echo get_theme_mod( 'cs2g_company_state' ); ?>
+                            <?php echo get_theme_mod( 'cs2g_company_zip' ); ?></div>
+                            <div class="contact-text-item">Phone: <a href="tel:<?php echo get_theme_mod( 'cs2g_company_phone' ); ?>"><?php echo get_theme_mod( 'cs2g_company_phone' ); ?></a></div>
+                            <div class="contact-text-item">Fax: <?php echo get_theme_mod( 'cs2g_company_fax' ); ?></div>
+                        </div>
+                        <?php if ( get_theme_mod( 'cs2g_company_street2' ) ) : ?>
+                            <div class="location">
+                                <div class="contact-text-item"><?php echo get_bloginfo( 'name' ); ?></div>
+                                <div class="contact-text-item"><?php echo get_theme_mod( 'cs2g_company_street2' ); ?></div>
+                                <div class="contact-text-item"><?php echo get_theme_mod( 'cs2g_company_city2' ); ?>
+                                <?php echo get_theme_mod( 'cs2g_company_state2' ); ?>
+                                <?php echo get_theme_mod( 'cs2g_company_zip2' ); ?></div>
+                                <div class="contact-text-item">Phone: <a href="tel:<?php echo get_theme_mod( 'cs2g_company_phone2' ); ?>"><?php echo get_theme_mod( 'cs2g_company_phone2' ); ?></a></div>
+                                <div class="contact-text-item">Fax: <?php echo get_theme_mod( 'cs2g_company_fax2' ); ?></div>
+                            </div>
+                        <?php endif; ?>
+                    </div>
                 </div>
             <?php endif; ?>
 

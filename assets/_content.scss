@@ -27,6 +27,7 @@ body.home {
     border: 3px solid $accent;
     border-radius: 10px;
     margin: 0 0 20px 0;
+    padding: 20px 15px;
 }
 
 // HOMEPAGE
@@ -62,5 +63,35 @@ body.home {
         border: none;
         border-radius: 0;
         margin: 0 0 20px 0;
+    }
+}
+
+.contact-info-block {
+    border-bottom: 2px dotted #a6a6a6;
+    margin: 0 0 20px 0;
+    padding: 0 0 20px 0;
+    text-align: center;
+
+    &:last-of-type {
+        border: 0;
+        margin: 0;
+    }
+
+    .location {
+        font-weight: 700;
+        margin: 0 0 20px 0;
+
+        &:last-of-type {
+            margin: 0;
+        }
+    }
+}
+
+.text-block {
+
+    &.phone,
+    &.email {
+        font-size: 22px;
+        font-weight: 700;
     }
 }

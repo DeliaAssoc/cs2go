@@ -181,4 +181,30 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 // Include custom post types
 include( get_stylesheet_directory() . '/includes/posttypes.php' );
 
+if( function_exists('acf_add_options_page') ) {
+	
+	acf_add_options_page(array(
+		'page_title' 	=> 'Product Category Options',
+		'menu_title'	=> 'Product Category Options',
+		'menu_slug' 	=> 'theme-general-settings',
+		'capability'	=> 'edit_posts',
+		'icon_url'		=> 'dashicons-cart',
+		'position'		=> 6,
+		'redirect'		=> true
+	));
+	
+	acf_add_options_sub_page(array(
+		'page_title' 	=> 'Refrigerated Options',
+		'menu_title'	=> 'Refrigerated',
+		'parent_slug'	=> 'theme-general-settings',
+	));
+	
+	acf_add_options_sub_page(array(
+		'page_title' 	=> 'Insulated Options',
+		'menu_title'	=> 'Insulated',
+		'parent_slug'	=> 'theme-general-settings',
+	));
+	
+}
+
 show_admin_bar(false);

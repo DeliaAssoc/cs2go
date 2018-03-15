@@ -1,3 +1,40 @@
+@media only screen and ( min-width: 568px ) {
+
+    // CONTACT
+    .contact-info-block {
+        margin: 0 0 40px 0;
+        overflow: hidden;
+        text-align: left;
+
+        &:first-of-type {
+            margin: 40px 0 40px 0;
+        }
+
+        .text-block {
+            float: left;
+            margin: 0 0 0 30px;
+
+            &.phone {
+                margin: 40px 0 0 30px;
+            }
+
+            &.email {
+                margin: 15px 0 0 30px;
+            }
+        }
+
+        .location {
+            margin: 0 0 40px 0;
+        }
+    }
+
+    .contact-block-image {
+        float: left;
+        text-align: center;
+        width: 150px;
+    }
+}
+
 @media only screen and ( min-width: 768px ) {
 
     .entry-content {
@@ -133,6 +170,12 @@
         line-height: 1.3rem;
         padding: 15px 0;
         width: 515px;
+    }
+
+    // CONTACT
+    .text-block.phone,
+    .text-block.email {
+        font-size: 25px;
     }
 
     // FOOTER
