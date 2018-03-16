@@ -141,8 +141,15 @@ function cs2g_scripts() {
 	// Styles brought over from old site
 	wp_enqueue_style( 'cs2g-legacy', get_template_directory_uri() . '/legacy.css' );
 
+	// prettyPhoto CSS
+	wp_enqueue_style( 'cs2g-prettyPhoto', get_template_directory_uri() . '/prettyPhoto.css' );
+
 	wp_enqueue_script( 'cs2g-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
 
+	// prettyPhoto JS
+	wp_enqueue_script( 'cs2g-pretty-js', get_template_directory_uri() . '/js/jquery.prettyPhoto.js', array( 'jquery' ), '20151215', true );
+
+	// Custom JS
 	wp_enqueue_script( 'cs2g-custom-js', get_template_directory_uri() . '/js/custom.js', array( 'jquery' ), '20151215', true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
