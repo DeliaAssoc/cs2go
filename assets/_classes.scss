@@ -56,3 +56,34 @@ a.pdf-dl {
 
 	}
 }
+
+.blue-bg {
+	background-color: $accent;
+}
+
+.red {
+	color: red;
+}
+
+.btn-lg,
+a.btn-lg {
+	border-radius: 30px;
+	box-shadow: $med-shadow;
+	font-size: 14px;
+	font-weight: 700;
+	margin: 0 0 10px 0;
+	max-width: 300px;
+	padding: 10px;
+	text-align: center;
+	text-transform: uppercase;
+	width: 100%;
+
+	&.blue-bg {
+		color: $lightest;
+
+		&:hover {
+			color: $accent;
+			background-color: lighten( $accent, 20% );
+		}
+	}
+}

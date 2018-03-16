@@ -22,35 +22,39 @@ get_header();
 						
 						<?php if (  is_category( 'refrigerated-containers' ) ) : ?>
 							<!-- Refrigerated Containers Category Information -->
-							<ul>
+							<ul class="product-list flexxed">
 								<?php global $post;
-								$args = array( 'posts_per_page' => -1, 'category_name' => 'refrigerated-containers', 'post_type' => 'products' );
+								$args = array( 'posts_per_page' => -1, 'category_name' => 'refrigerated-containers', 'post_type' => 'products', 'order' => ASC );
 								$myposts = get_posts( $args ); // create array of posts
 								$i = count( $myposts ); // get post count
 
 								foreach ( $myposts as $post ) : setup_postdata( $post ); ?>
-									<li class="product products-<?php echo $i; ?>">
+									<li class="product-list-item products-<?php echo $i; ?>">
 										<a href="<?php the_permalink(); ?>">
-											<?php the_post_thumbnail(); ?>
 											<?php the_title(); ?>
+											<?php the_post_thumbnail(); ?>
 										</a>
 									</li>
 								<?php endforeach; 
 								wp_reset_postdata();?>
 							</ul>
+							<div style="font-weight:700;text-align:center;">Click on a product to learn more</div>
 							<?php the_field('refrigerated_page_content', 'option'); ?>
 
 						<?php elseif ( is_category( 'insulated-containers' ) ) : ?>
 							<!-- Insulated Containers Category Information -->
-							<ul>
+							<ul class="product-list flexxed">
 								<?php global $post;
-								$args = array( 'posts_per_page' => -1, 'category_name' => 'insulated-containers', 'post_type' => 'products' );
+								$args = array( 'posts_per_page' => -1, 'category_name' => 'insulated-containers', 'post_type' => 'products', 'order' => ASC  );
 								$myposts = get_posts( $args ); // create array of posts
 								$i = count( $myposts ); // get post count
 								
 								foreach ( $myposts as $post ) : setup_postdata( $post ); ?>
-									<li>
-										<a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+									<li class="product-list-item products-<?php echo $i; ?>">
+										<a href="<?php the_permalink(); ?>">
+											<?php the_title(); ?>
+											<?php the_post_thumbnail(); ?>
+										</a>
 									</li>
 								<?php endforeach; 
 								wp_reset_postdata();?>
@@ -59,6 +63,10 @@ get_header();
 								
 						<?php endif; ?>
 
+					<div class="product-cta-btns flexxed">
+						<a href="/purchase" class="purchase btn-lg blue-bg">Purchase a Container</a>
+						<a href="/rent" class="rent btn-lg blue-bg">Rent a Container</a>
+					</div>
 
 				</div><!-- .entry-content -->
 				<?php

@@ -24,10 +24,11 @@
 
 			<?php if ( have_rows( 'options' ) ) : ?>
 				<div class="product-options">
+					<a href="/options"><h2>Options Available<span style="font-size: .75em;">- Click on an option to learn more</span></h2></a>
 					<ul>
 					<?php while ( have_rows( 'options' ) ) : the_row(); ?>
 						<li>
-							<a href="<?php the_sub_field( 'option_url' ); ?>"><?php the_sub_field( 'option_name' ); ?></a>
+							&bull; <a href="<?php the_sub_field( 'option_url' ); ?>"><?php the_sub_field( 'option_name' ); ?></a>
 						</li>
 					<?php endwhile; ?>
 					</ul>
@@ -49,6 +50,11 @@
 				<?php $file = get_field( 'spec_sheet' ); ?>
 				<a target="_blank" class="pdf-dl" href="<?php echo $file[ 'url' ]; ?>">Download Specification Sheet</a>
 			<?php endif; ?>
+
+			<div class="product-cta-btns flexxed">
+				<a href="/purchase" class="purchase btn-lg blue-bg">Purchase a Container</a>
+				<a href="/rent" class="rent btn-lg blue-bg">Rent a Container</a>
+			</div>
 		</div><!-- .entry-content -->
 
 		<aside class="sidebar">
