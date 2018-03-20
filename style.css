@@ -545,13 +545,13 @@ table {
 
 /* Just for funs and it looks cool */
 ::-moz-selection {
-  background: #fcd700;
+  background: #e21a22;
   color: #fff;
   text-shadow: none;
 }
 
 ::selection {
-  background: orange;
+  background: #e21a22;
   color: #fff;
   text-shadow: none;
 }
@@ -1170,10 +1170,10 @@ object {
 }
 
 @media only screen and (min-width: 568px) {
-  .page-template-options .dotted-block-image {
+  .page-template-blocked .dotted-block-image {
     margin: 0 30px 0 0;
   }
-  .page-template-options .dotted-block .text-block {
+  .page-template-blocked .dotted-block .text-block {
     float: none;
   }
 

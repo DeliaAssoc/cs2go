@@ -1,6 +1,6 @@
 <?php
 /**
- * Template part for displaying page content in options.php
+ * Template part for displaying page content in blocked.php
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
@@ -19,17 +19,17 @@
             ?>
            </div>
 
-            <?php if ( have_rows( 'options' ) ) : ?>
-                <?php while( have_rows( 'options' ) ) : the_row(); ?>
+            <?php if ( have_rows( 'blocks' ) ) : ?>
+                <?php while( have_rows( 'blocks' ) ) : the_row(); ?>
 
                     <div class="dotted-block">
                         <div class="dotted-block-image">
-                            <?php $image = get_sub_field( 'option_image' ); ?>
+                            <?php $image = get_sub_field( 'block_image' ); ?>
                             <img src="<?php echo $image[ 'url' ]; ?>" alt="">
 
-                            <?php $xImages = get_sub_field( 'options_extra_images' );
+                            <?php $xImages = get_sub_field( 'block_extra_images' );
                                 // Create name for gallery
-                                $gallery = str_replace( ' ', '', get_sub_field( 'option_title' ) );
+                                $gallery = str_replace( ' ', '', get_sub_field( 'block_title' ) );
 
                                 if ( $xImages ) : ?>
                                     <a href="<?php echo $xImages[0]['url']; ?>" rel="prettyPhoto[<?php echo $gallery; ?>]"><img src="http://localhost/cs2go/wp-content/uploads/2018/03/morephotos.png" width="150" height="31" alt="more photos" /></a>
@@ -45,8 +45,8 @@
                             <?php endif; ?>
                         </div>
                         <div class="text-block">
-                            <strong><?php the_sub_field( 'option_title' ); ?></strong>
-                            <div class="options-text"><?php the_sub_field( 'option_text' ); ?></div>
+                            <strong><?php the_sub_field( 'block_title' ); ?></strong>
+                            <div class="blocks-text"><?php the_sub_field( 'block_text' ); ?></div>
                         </div>
                     </div>
 
@@ -55,9 +55,9 @@
 
 		</div><!-- .entry-content -->
 		<?php
-			if (is_active_sidebar( 'contact' ) ) { ?>
+			if (is_active_sidebar( 'default' ) ) { ?>
 				<aside class="sidebar">
-					<?php dynamic_sidebar( 'contact' ); ?>
+					<?php dynamic_sidebar( 'default' ); ?>
 				</aside>
 			<?php } ?>
 	</div><!-- .constrain -->
