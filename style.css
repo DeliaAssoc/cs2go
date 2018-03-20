@@ -298,7 +298,7 @@ a.pdf-dl:before {
 }
 
 .blue-bg {
-  background-color: #004080;
+  background-color: #004080 !important;
 }
 
 .red {
@@ -324,6 +324,52 @@ a.btn-lg.blue-bg {
 }
 .btn-lg.blue-bg:hover,
 a.btn-lg.blue-bg:hover {
+  color: #004080;
+  background-color: #0073e6;
+}
+
+.btn-med,
+a.btn-med {
+  border-radius: 30px;
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.35);
+  font-size: 14px;
+  font-weight: 700;
+  margin: 0 0 10px 0;
+  max-width: 200px;
+  padding: 10px;
+  text-align: center;
+  text-transform: uppercase;
+  width: 100%;
+}
+.btn-med.blue-bg,
+a.btn-med.blue-bg {
+  color: #FFFFFF;
+}
+.btn-med.blue-bg:hover,
+a.btn-med.blue-bg:hover {
+  color: #004080;
+  background-color: #0073e6;
+}
+
+.btn-sm,
+a.btn-sm {
+  border-radius: 30px;
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.35);
+  font-size: 14px;
+  font-weight: 700;
+  margin: 0 0 10px 0;
+  max-width: 100px;
+  padding: 10px;
+  text-align: center;
+  text-transform: uppercase;
+  width: 100%;
+}
+.btn-sm.blue-bg,
+a.btn-sm.blue-bg {
+  color: #FFFFFF;
+}
+.btn-sm.blue-bg:hover,
+a.btn-sm.blue-bg:hover {
   color: #004080;
   background-color: #0073e6;
 }
@@ -547,18 +593,6 @@ a:hover {
 /*--------------------------------------------------------------
 # Forms
 --------------------------------------------------------------*/
-button,
-input[type="button"],
-input[type="reset"],
-input[type="submit"] {
-  background: #e6e6e6;
-  color: rgba(0, 0, 0, 0.8);
-  font-size: 12px;
-  font-size: 0.75rem;
-  line-height: 1;
-  padding: .6em 1em .4em;
-}
-
 input[type="text"],
 input[type="email"],
 input[type="url"],
@@ -876,24 +910,27 @@ body.home {
   margin: 0 0 20px 0;
 }
 
-.contact-info-block {
+.dotted-block {
   border-bottom: 2px dotted #a6a6a6;
   margin: 0 0 20px 0;
   padding: 0 0 20px 0;
   text-align: center;
 }
-.contact-info-block:last-of-type {
+.dotted-block:last-of-type {
   border: 0;
   margin: 0;
 }
-.contact-info-block .location {
+.dotted-block .location {
   font-weight: 700;
   margin: 0 0 20px 0;
 }
-.contact-info-block .location:last-of-type {
+.dotted-block .location:last-of-type {
   margin: 0;
 }
 
+.text-block {
+  overflow: hidden;
+}
 .text-block.phone, .text-block.email {
   font-size: 22px;
   font-weight: 700;
@@ -979,6 +1016,16 @@ body.home {
 }
 .product-cta-btns .btn-lg {
   width: 48%;
+}
+
+.temp-calc {
+  text-align: center;
+}
+
+.temp-calc .form-button {
+  border: none;
+  display: inline-block;
+  margin: 0 5px;
 }
 
 /*--------------------------------------------------------------
@@ -1123,29 +1170,36 @@ object {
 }
 
 @media only screen and (min-width: 568px) {
-  .contact-info-block {
+  .page-template-options .dotted-block-image {
+    margin: 0 30px 0 0;
+  }
+  .page-template-options .dotted-block .text-block {
+    float: none;
+  }
+
+  .dotted-block {
     margin: 0 0 40px 0;
     overflow: hidden;
     text-align: left;
   }
-  .contact-info-block:first-of-type {
+  .dotted-block:first-of-type {
     margin: 40px 0 40px 0;
   }
-  .contact-info-block .text-block {
+  .dotted-block .text-block {
     float: left;
     margin: 0 0 0 30px;
   }
-  .contact-info-block .text-block.phone {
+  .dotted-block .text-block.phone {
     margin: 40px 0 0 30px;
   }
-  .contact-info-block .text-block.email {
+  .dotted-block .text-block.email {
     margin: 15px 0 0 30px;
   }
-  .contact-info-block .location {
+  .dotted-block .location {
     margin: 0 0 40px 0;
   }
 
-  .contact-block-image {
+  .dotted-block-image {
     float: left;
     text-align: center;
     width: 150px;

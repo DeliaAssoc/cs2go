@@ -18,8 +18,8 @@
             ?>
             
             <?php if ( get_theme_mod( 'cs2g_company_tollfree' ) ) : ?>
-                <div class="contact-info-block">
-                    <div class="contact-block-image">
+                <div class="dotted-block">
+                    <div class="dotted-block-image">
                         <img src="<?php echo get_theme_mod( 'cs2g_company_tollfree_image' ); ?> " alt="">
                     </div>
                     <div class="text-block phone">
@@ -29,8 +29,8 @@
             <?php endif; ?>
 
            <?php if ( get_theme_mod( 'cs2g_company_email' ) ) : ?>
-                <div class="contact-info-block">
-                    <div class="contact-block-image">
+                <div class="dotted-block">
+                    <div class="dotted-block-image">
                         <img src="<?php echo get_theme_mod( 'cs2g_company_email_image' ); ?> " alt="">
                     </div>
                     <div class="text-block email">
@@ -40,8 +40,8 @@
             <?php endif; ?>
 
            <?php if ( get_theme_mod( 'cs2g_company_street' ) ) : ?>
-                <div class="contact-info-block locations">
-                    <div class="contact-block-image">
+                <div class="dotted-block locations">
+                    <div class="dotted-block-image">
                         <img src="<?php echo get_theme_mod( 'cs2g_company_address_image' ); ?> " alt="">
                     </div>
                     <div class="text-block">

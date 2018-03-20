@@ -58,7 +58,7 @@ a.pdf-dl {
 }
 
 .blue-bg {
-	background-color: $accent;
+	background-color: $accent !important;
 }
 
 .red {
@@ -73,6 +73,52 @@ a.btn-lg {
 	font-weight: 700;
 	margin: 0 0 10px 0;
 	max-width: 300px;
+	padding: 10px;
+	text-align: center;
+	text-transform: uppercase;
+	width: 100%;
+
+	&.blue-bg {
+		color: $lightest;
+
+		&:hover {
+			color: $accent;
+			background-color: lighten( $accent, 20% );
+		}
+	}
+}
+
+.btn-med,
+a.btn-med {
+	border-radius: 30px;
+	box-shadow: $med-shadow;
+	font-size: 14px;
+	font-weight: 700;
+	margin: 0 0 10px 0;
+	max-width: 200px;
+	padding: 10px;
+	text-align: center;
+	text-transform: uppercase;
+	width: 100%;
+
+	&.blue-bg {
+		color: $lightest;
+
+		&:hover {
+			color: $accent;
+			background-color: lighten( $accent, 20% );
+		}
+	}
+}
+
+.btn-sm,
+a.btn-sm {
+	border-radius: 30px;
+	box-shadow: $med-shadow;
+	font-size: 14px;
+	font-weight: 700;
+	margin: 0 0 10px 0;
+	max-width: 100px;
 	padding: 10px;
 	text-align: center;
 	text-transform: uppercase;
