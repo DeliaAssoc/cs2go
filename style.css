@@ -374,6 +374,44 @@ a.btn-sm.blue-bg:hover {
   background-color: #0073e6;
 }
 
+.quote-form .input-block {
+  clear: both;
+  display: block;
+  margin: 0 0 5px 0;
+  overflow: hidden;
+}
+.quote-form label {
+  font-weight: 700;
+  margin: 0 0 5px 0;
+}
+.quote-form input,
+.quote-form select,
+.quote-form textarea {
+  margin: 0 0 15px 0;
+  width: 100%;
+}
+.quote-form input[type=text],
+.quote-form input[type=email],
+.quote-form select {
+  height: 40px;
+}
+.quote-form input[type=checkbox] {
+  float: left;
+  margin: 0 5px 0 0;
+  position: relative;
+  top: 7px;
+  width: auto;
+}
+.quote-form .wpcf7-list-item-label {
+  float: left;
+}
+.quote-form .wpcf7-list-item {
+  display: block;
+  margin: 0 0 5px 0;
+  overflow: hidden;
+  width: 100%;
+}
+
 /*--------------------------------------------------------------
 # Typography
 --------------------------------------------------------------*/
@@ -1028,6 +1066,10 @@ body.home {
   margin: 0 5px;
 }
 
+.blog .entry-footer {
+  clear: both;
+}
+
 /*--------------------------------------------------------------
 ## Comments
 --------------------------------------------------------------*/
@@ -1217,6 +1259,23 @@ object {
   .product-options ul {
     column-count: 2;
   }
+
+  .quote-form label {
+    display: block;
+    float: left;
+    width: 220px;
+  }
+  .quote-form select, .quote-form input, .quote-form textarea, .quote-form .Condition, .quote-form .Product, .quote-form .Options {
+    float: right;
+    width: 300px;
+  }
+  .quote-form input[type=submit] {
+    clear: both;
+  }
+  .quote-form .City, .quote-form .State, .quote-form .Zip {
+    float: right;
+    clear: right;
+  }
 }
 @media only screen and (min-width: 640px) {
   .product-options ul {
@@ -1388,6 +1447,13 @@ object {
   .product-options ul {
     column-count: 3;
   }
+
+  .quote-form label {
+    text-align: right;
+  }
+  .quote-form select, .quote-form input, .quote-form textarea, .quote-form .Condition, .quote-form .Product, .quote-form .Options {
+    width: 350px;
+  }
 }
 @media only screen and (min-width: 960px) {
   .site-branding,
@@ -1408,6 +1474,10 @@ object {
   .products-6 {
     width: 23.5%;
   }
+
+  .quote-form select, .quote-form input, .quote-form textarea, .quote-form .Condition, .quote-form .Product, .quote-form .Options {
+    width: 410px;
+  }
 }
 @media only screen and (min-width: 1024px) {
   .entry-content {
@@ -1417,6 +1487,10 @@ object {
   .products-5,
   .products-6 {
     width: 19%;
+  }
+
+  .quote-form select, .quote-form input, .quote-form textarea, .quote-form .Condition, .quote-form .Product, .quote-form .Options {
+    width: 440px;
   }
 }
 @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {

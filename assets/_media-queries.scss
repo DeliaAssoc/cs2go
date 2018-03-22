@@ -63,6 +63,30 @@
             column-count: 2;
         }
     }
+
+    // FORM
+    .quote-form {
+
+        label {
+            display: block;
+            float: left;
+            width: 220px;
+        }
+
+        select, input, textarea, .Condition, .Product, .Options {
+            float: right;
+            width: 300px;
+        }
+
+        input[type=submit] {
+            clear: both;
+        }
+
+        .City, .State, .Zip {
+            float: right;
+            clear: right;
+        }
+    }
 }
 
 @media only screen and ( min-width: 640px ) {
@@ -273,6 +297,18 @@
             column-count: 3;
         }
     }
+
+    // FORM
+    .quote-form {
+
+        label {
+            text-align: right;
+        }
+
+        select, input, textarea, .Condition, .Product, .Options {
+            width: 350px;
+        }
+    }
 }
 
 @media only screen and ( min-width: 960px ) {
@@ -300,6 +336,14 @@
     .products-6 {
         width: 23.5%;
     }
+
+    // FORM
+    .quote-form {
+
+        select, input, textarea, .Condition, .Product, .Options {
+            width: 410px;
+        }
+    }
 }
 
 @media only screen and ( min-width: 1024px ) {
@@ -312,5 +356,13 @@
     .products-5,
     .products-6 {
         width: 19%;
+    }
+
+    // FORM
+    .quote-form {
+
+        select, input, textarea, .Condition, .Product, .Options {
+            width: 440px;
+        }
     }
 }

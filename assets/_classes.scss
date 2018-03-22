@@ -133,3 +133,51 @@ a.btn-sm {
 		}
 	}
 }
+
+// FORMS
+.quote-form {
+
+	.input-block {
+		clear: both;
+		display: block;
+		margin: 0 0 5px 0;
+		overflow: hidden;
+	}
+
+	label {
+		font-weight: 700;
+		margin: 0 0 5px 0;
+	}
+
+	input,
+	select,
+	textarea {
+		margin: 0 0 15px 0;
+		width: 100%;
+	}
+
+	input[type=text],
+	input[type=email],
+	select {
+		height: 40px;
+	}
+
+	input[type=checkbox] {
+		float: left;
+		margin: 0 5px 0 0;
+		position: relative;
+		top: 7px;
+		width: auto;
+	}
+
+	.wpcf7-list-item-label {
+		float: left;
+	}
+
+	.wpcf7-list-item {
+		display: block;
+		margin: 0 0 5px 0;
+		overflow: hidden;
+		width: 100%;
+	}
+}

@@ -129,6 +129,16 @@ function cs2g_sidebars() {
 	);
 	register_sidebar( $args );
 
+	$args = array(
+		'id'            => 'news',
+		'class'         => 'news',
+		'name'          => __( 'News Page Sidebar Area', 'text_domain' ),
+		'description'   => __( 'Widget area for News Template Pages', 'text_domain' ),
+		'before_widget' => '',
+		'after_widget'  => '',
+	);
+	register_sidebar( $args );
+
 }
 add_action( 'widgets_init', 'cs2g_sidebars' );
 
