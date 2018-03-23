@@ -18,8 +18,8 @@
 			</div>
 
 			<?php if ( get_field( 'brochure' ) ) : 
-				$file = get_field( 'brochure' ); ?>
-				<a target="_blank" class="pdf-dl" href="<?php echo $file[ 'url' ]; ?>">Download Brochure</a>
+				$brochure = get_field( 'brochure' ); ?>
+				<a target="_blank" class="pdf-dl" href="<?php echo $brochure[ 'url' ]; ?>">Download Brochure</a>
 			<?php endif; ?>
 
 			<?php if ( have_rows( 'options' ) ) : ?>
@@ -28,7 +28,7 @@
 					<ul>
 					<?php while ( have_rows( 'options' ) ) : the_row(); ?>
 						<li>
-							&bull; <a href="<?php the_sub_field( 'option_url' ); ?>"><?php the_sub_field( 'option_name' ); ?></a>
+							&bull; <a href="<?php the_sub_field( 'options_url' ); ?>"><?php the_sub_field( 'option_name' ); ?></a>
 						</li>
 					<?php endwhile; ?>
 					</ul>
@@ -46,9 +46,20 @@
 				</div>
 			<?php endif; ?>
 
+			<?php if ( have_rows( 'product_tables' ) ) : ?>
+				<div class="product-tables">
+					<h2>Product Specifications</h2>
+					<?php while ( have_rows( 'product_tables' ) ) : the_row(); ?>
+						<div class="single-prod-table">
+							<?php echo do_shortcode( get_sub_field( 'table_shortcode' ) ); ?>
+						</div>
+					<?php endwhile; ?>
+				</div>
+			<?php endif; ?>	
+
 			<?php if ( get_field( 'spec_sheet' ) ) : ?>
-				<?php $file = get_field( 'spec_sheet' ); ?>
-				<a target="_blank" class="pdf-dl" href="<?php echo $file[ 'url' ]; ?>">Download Specification Sheet</a>
+				<?php $specSheet = get_field( 'spec_sheet' ); ?>
+				<a target="_blank" class="pdf-dl" href="<?php echo $specSheet[ 'url' ]; ?>">Download Specification Sheet</a>
 			<?php endif; ?>
 
 			<div class="product-cta-btns flexxed">
@@ -84,13 +95,12 @@
 					</ul>
 				</div><!-- .standard-features -->
 			<?php endif; ?>
-
 			<?php if ( get_field( 'spec_sheet' ) ) : ?>
-				<?php $file = get_field( 'spec_sheet' ); ?>
-				<a target="_blank" class="pdf-dl" href="<?php echo $file[ 'url' ]; ?>">Download Specification Sheet</a>
+				<?php $specSheet = get_field( 'spec_sheet' ); ?>
+				<a target="_blank" class="pdf-dl" href="<?php echo $specSheet[ 'url' ]; ?>">Download Specification Sheet</a>
 			<?php endif; ?>
+			
 		</aside><!-- .sidebar -->
-
 	</div><!-- .constrain -->
 </section><!-- #post-<?php the_ID(); ?> -->
 

@@ -195,6 +195,36 @@ body.home {
     }
 }
 
+.single-prod-table {
+    font-size: 14px;
+    margin: 0 0 30px 0;
+
+    &:last-of-type {
+        margin: 0;
+    }
+}
+
+.product-tables {
+
+    table {
+        border: 1px solid;
+        width: 100%;
+    }
+
+    th {
+        border: 1px solid;
+        font-weight: 700;
+        text-align: center;
+    }
+
+    td {
+        border: 1px solid;
+        padding: 3px;
+        text-align: center;
+    }
+}
+
+// TEMP CALC PAGE
 .temp-calc {
     text-align: center;
 }

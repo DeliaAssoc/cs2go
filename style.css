@@ -687,11 +687,11 @@ textarea {
 ## Links
 --------------------------------------------------------------*/
 a {
-  color: #004080;
+  color: #337ab7;
 }
 
 a:visited {
-  color: #004080;
+  color: #337ab7;
 }
 
 a:hover,
@@ -1056,6 +1056,29 @@ body.home {
   width: 48%;
 }
 
+.single-prod-table {
+  font-size: 14px;
+  margin: 0 0 30px 0;
+}
+.single-prod-table:last-of-type {
+  margin: 0;
+}
+
+.product-tables table {
+  border: 1px solid;
+  width: 100%;
+}
+.product-tables th {
+  border: 1px solid;
+  font-weight: 700;
+  text-align: center;
+}
+.product-tables td {
+  border: 1px solid;
+  padding: 3px;
+  text-align: center;
+}
+
 .temp-calc {
   text-align: center;
 }
@@ -1277,6 +1300,40 @@ object {
     clear: right;
   }
 }
+/* Credits:
+    This bit of code: Exis | exisweb.net/responsive-tables-in-wordpress
+    Original idea: Dudley Storey | codepen.io/dudleystorey/pen/Geprd */
+@media screen and (max-width: 767px) {
+  table {
+    width: 100%;
+  }
+
+  thead {
+    display: none;
+  }
+
+  tr:nth-of-type(2n) {
+    background-color: inherit;
+  }
+
+  tr td:first-child {
+    background-color: #e4e4e4;
+    font-weight: 700;
+    font-size: 1.3em;
+  }
+
+  tbody td {
+    display: block;
+    text-align: center;
+  }
+
+  tbody td:before {
+    content: attr(data-th);
+    display: block;
+    font-weight: 500;
+    text-align: center;
+  }
+}
 @media only screen and (min-width: 640px) {
   .product-options ul {
     column-count: 3;
@@ -1418,6 +1475,10 @@ object {
   .text-block.phone,
   .text-block.email {
     font-size: 25px;
+  }
+
+  .single-prod-table {
+    margin: 0 0 40px 0;
   }
 
   .site-footer .flexxed {
