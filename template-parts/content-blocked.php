@@ -22,7 +22,7 @@
             <?php if ( have_rows( 'blocks' ) ) : ?>
                 <?php while( have_rows( 'blocks' ) ) : the_row(); ?>
 
-                    <div class="dotted-block">
+                    <div id="<?php the_sub_field( 'anchor' ); ?>" class="dotted-block">
                         <div class="dotted-block-image">
                             <?php $image = get_sub_field( 'block_image' ); ?>
                             <img src="<?php echo $image[ 'url' ]; ?>" alt="">
@@ -32,7 +32,7 @@
                                 $gallery = str_replace( ' ', '', get_sub_field( 'block_title' ) );
 
                                 if ( $xImages ) : ?>
-                                    <a href="<?php echo $xImages[0]['url']; ?>" rel="prettyPhoto[<?php echo $gallery; ?>]"><img src="http://localhost/cs2go/wp-content/uploads/2018/03/morephotos.png" width="150" height="31" alt="more photos" /></a>
+                                    <a href="<?php echo $xImages[0]['url']; ?>" rel="prettyPhoto[<?php echo $gallery; ?>]"><img src="/wp-content/uploads/2018/03/morephotos.png" width="150" height="31" alt="more photos" /></a>
                                     
                                     <!-- Stop foreach from duplucating first image in gallery -->
                                     <?php $xImages = array_slice( $xImages, 1 ); ?>
@@ -48,7 +48,7 @@
                             <strong><?php the_sub_field( 'block_title' ); ?></strong>
                             <div class="blocks-text"><?php the_sub_field( 'block_text' ); ?></div>
                         </div>
-                    </div>
+                    </div><!-- .dotted-block -->
 
                 <?php endwhile; ?>
             <?php endif; ?>

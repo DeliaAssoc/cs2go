@@ -30,7 +30,7 @@ get_header();
                                         <div class="xboxcontent"> 
                                             <h1>Varying Lengths</h1> 
                                             <p>Our refrigerated containers come in two standard sizes of 20-ft and 40-ft lengths We can build other custom sizes to fit your needs.</p> 
-                                            <a href="refrigerated.php">learn more</a> 
+                                            <a href="/category/refrigerated-containers/">learn more</a> 
                                         </div> 
                                         <b class="xb7"></b><b class="xb6"></b><b class="xb5"></b><b class="xb4"></b><b class="xb3"></b><b class="xb2"></b><b class="xb1"></b> 
                                     </div> 
@@ -45,7 +45,7 @@ get_header();
                                             <h1>Easy Delivery</h1> 
                                             <em class="point_left"></em> 
                                             <p>Whether you purchase or rent one of our refrigerated or insulated containers, we will deliver it to your site, thoroughly cleaned and ready to go.  Our containers are compatible with fork lifts and pallet jacks.</p> 
-                                            <a href="products.php">learn more</a> 
+                                            <a href="/procats">learn more</a> 
                                         </div> 
                                         <b class="xb7"></b><b class="xb6"></b><b class="xb5"></b><b class="xb4"></b><b class="xb3"></b><b class="xb2"></b><b class="xb1"></b> 
                                     </div> 
@@ -60,7 +60,7 @@ get_header();
                                         <div class="xboxcontent"> 
                                             <h1>Custom Modifications</h1> 
                                             <p>We offer many custom features for your cold box. Modifications include interior lighting, temperature alarms, security alarms, temperature recorders, plastic strip curtains and more.</p> 
-                                            <a href="products.php">learn more</a> 
+                                            <a href="/procats">learn more</a> 
                                         </div> 
                                         <b class="xb7"></b><b class="xb6"></b><b class="xb5"></b><b class="xb4"></b><b class="xb3"></b><b class="xb2"></b><b class="xb1"></b> 
                                     </div> 
@@ -75,7 +75,7 @@ get_header();
                                         <div class="xboxcontent"> 
                                             <h1>Electrically Powered</h1> 
                                             <p>Our refrigerated units are electrically powered and suitable for outdoor or indoor use. They are cleaner, safer, and quieter than diesel powered refrigeration units, and produce a temperature range of -10°F to 70°F.</p> 
-                                            <a href="products.php">learn more</a> 
+                                            <a href="/procats">learn more</a> 
                                         </div> 
                                         <b class="xb7"></b><b class="xb6"></b><b class="xb5"></b><b class="xb4"></b><b class="xb3"></b><b class="xb2"></b><b class="xb1"></b> 
                                     </div> 
@@ -90,7 +90,7 @@ get_header();
                                         <div class="xboxcontent"> 
                                             <h1>Temperature Controlled</h1> 
                                             <p>Rest assured that you will always have complete control over the temperature inside your box.  Our units can go as low as -10F and as high as 70F.  You can also order Multi-temperature, Medium temperature, Low temperature units and Blast Freezers. </p> 
-                                            <a href="products.php">learn more</a> 
+                                            <a href="/procats">learn more</a> 
                                         </div> 
                                         <b class="xb7"></b><b class="xb6"></b><b class="xb5"></b><b class="xb4"></b><b class="xb3"></b><b class="xb2"></b><b class="xb1"></b> 
                                     </div> 
@@ -105,7 +105,7 @@ get_header();
                                         <div class="xboxcontent"> 
                                             <h1>Sturdy Construction</h1> 
                                             <p>Our containers are built to stringent ISO Standards for structural strength and durability. All containers feature aluminum T-grade or Flat floors and stainless steel interior wall lining.</p> 
-                                            <a href="products.php">learn more</a> 
+                                            <a href="/procats">learn more</a> 
                                         </div> 
                                         <b class="xb7"></b><b class="xb6"></b><b class="xb5"></b><b class="xb4"></b><b class="xb3"></b><b class="xb2"></b><b class="xb1"></b> 
                                     </div> 
@@ -120,8 +120,8 @@ get_header();
                                         <div class="xboxcontent"> 
                                             <h1>Rentals and Sales</h1> 
                                             <p>Cold Storage 2 Go offers equipment sales and short-term or long-term rentals.  Choose the length of your lease term or buy your own container.</p> 
-                                            <a href="purchase.php">Purchase</a> 
-                                            <a href="lease.php">Lease</a> 
+                                            <a href="/purchase">Purchase</a> 
+                                            <a href="/rent">Lease</a> 
                                         </div> 
                                         <b class="xb7"></b><b class="xb6"></b><b class="xb5"></b><b class="xb4"></b><b class="xb3"></b><b class="xb2"></b><b class="xb1"></b> 
                                     </div> 

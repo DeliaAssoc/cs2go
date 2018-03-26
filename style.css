@@ -931,7 +931,18 @@ body.home {
 
 .homepage-about {
   background-color: #004080;
-  display: none;
+  color: #FFFFFF;
+  display: block;
+}
+.homepage-about .constrain {
+  background-position: right top;
+  background-repeat: no-repeat;
+  border-bottom: 3px solid #FFFFFF;
+  height: auto;
+  padding: 10px;
+  position: relative;
+  top: 0;
+  max-width: 1024px;
 }
 
 .snow .constrain {
@@ -939,6 +950,21 @@ body.home {
   background-position: top left;
   background-repeat: no-repeat;
   padding: 20px 10px 0;
+}
+
+.procat-btn {
+  background-color: #FFFFFF;
+  border: 1px solid #004080;
+  border-radius: 10px;
+  display: block;
+  font-weight: 700;
+  margin: 0 0 10px 0;
+  text-align: center;
+  text-transform: uppercase;
+}
+.procat-btn:hover {
+  -webkit-box-shadow: 0 0 0 3px #004080;
+  box-shadow: 0 0 0 3px #004080;
 }
 
 .page-template-contact .sidebar {
@@ -1242,6 +1268,21 @@ object {
     float: none;
   }
 
+  .page-template-procats .flexxed {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
+  }
+
+  .procat-btn {
+    width: 49%;
+  }
+
   .dotted-block {
     margin: 0 0 40px 0;
     overflow: hidden;
@@ -1438,27 +1479,8 @@ object {
     color: #cc0000;
   }
 
-  .homepage-map {
-    display: block;
-  }
-
-  .mobile-video {
-    display: none;
-  }
-
-  .homepage-about {
-    color: #FFFFFF;
-    display: block;
-  }
   .homepage-about .constrain {
-    background-image: url("http://localhost/cs2go/wp-content/uploads/2018/03/homepage-about-bg.png");
-    background-position: right top;
-    background-repeat: no-repeat;
-    border-bottom: 3px solid #FFFFFF;
-    height: auto;
-    position: relative;
-    top: 0;
-    width: 1024px;
+    background-image: url("/wp-content/uploads/2018/03/homepage-about-bg.png");
   }
 
   .company-snippet {
@@ -1530,6 +1552,16 @@ object {
     font-size: 15px;
   }
 
+  .page-template-procats .flexxed {
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+  }
+
+  .procat-btn {
+    width: 31%;
+  }
+
   .products-4,
   .products-5,
   .products-6 {
@@ -1541,6 +1573,14 @@ object {
   }
 }
 @media only screen and (min-width: 1024px) {
+  .mobile-video {
+    display: none;
+  }
+
+  .homepage-map {
+    display: block;
+  }
+
   .entry-content {
     padding: 20px;
   }

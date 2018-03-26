@@ -42,7 +42,19 @@ body.home {
 
 .homepage-about {
     background-color: $accent;
-    display: none;
+    color: $lightest;
+    display: block;
+
+    .constrain {
+        background-position: right top;
+        background-repeat: no-repeat;
+        border-bottom: 3px solid $lightest;
+        height: auto;
+        padding: 10px;
+        position: relative;
+        top: 0;
+        max-width: 1024px;
+    }
 }
 
 // DEFAULT PAGE
@@ -53,6 +65,23 @@ body.home {
         background-position: top left;
         background-repeat: no-repeat;
         padding: 20px 10px 0;
+    }
+}
+
+// PRODUCTS CATEGORY PAGE
+.procat-btn {
+    background-color: $lightest;
+    border: 1px solid $accent;
+    border-radius: 10px;
+    display: block;
+    font-weight: 700;
+    margin: 0 0 10px 0;
+    text-align: center;
+    text-transform: uppercase;
+
+    &:hover {
+        -webkit-box-shadow: 0 0 0 3px $accent;
+        box-shadow: 0 0 0 3px $accent;
     }
 }
 
