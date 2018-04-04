@@ -75,7 +75,7 @@
 
 			<?php $images = get_field( 'product_photos' );
 				if ( $images ) : ?>
-					<a href="<?php echo $images[0]['url']; ?>" rel="prettyPhoto[product]"><img src="http://localhost/cs2go/wp-content/uploads/2018/03/morephotos.png" width="150" height="31" alt="more photos" /></a>
+					<a href="<?php echo $images[0]['url']; ?>" rel="prettyPhoto[product]"><img src="/wp-content/uploads/2018/03/morephotos.png" width="150" height="31" alt="more photos" /></a>
 					<?php foreach( $images as $image ) : ?>
 						<a href="<?php echo $image[ 'url' ]; ?>" rel="prettyPhoto[product]">
 							<!-- <img src="http://localhost/cs2go/wp-content/uploads/2018/03/blank.gif" alt="" /> -->

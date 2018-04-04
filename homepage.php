@@ -13,13 +13,17 @@ get_header();
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main">
 
+            <section class="homepage-container">
+                <img src="/wp-content/uploads/2018/04/home-container.png" alt="">
+            </section>
+
             <section class="homepage-map">
                 <div id="runningbg"> 
                     <div id="contenth"> 
                         <div id="map">
                             <img src="wp-content/uploads/2018/03/main_03b.jpg" alt="" border="0" usemap="#Map" title="" style="padding:0px; margin:0px; vertical-align:bottom;">
                             <map name="Map" id="Map">
-                            <area shape="rect" coords="62,87,291,215" href="video.php" target="_self" alt="quote">
+                            <area shape="rect" coords="62,87,291,215" href="/video" target="_self" alt="quote">
                             </map>
                             <ul> 
                                 <li id="length"><a href="#nogo" class="tl">length<!--[if gte IE 7]><!--></a><!--<![endif]--> 
@@ -134,7 +138,7 @@ get_header();
             </section><!-- .homepage-map -->
             <section class="mobile-video">
                 <div class="constrain">
-                    <iframe src="//player.vimeo.com/video/76904696?autoplay=1" width="574" style="border: none; margin-top: 30px; margin-bottom: 50px;" id="videobox"></iframe>
+                    <iframe src="//player.vimeo.com/video/76904696?autoplay=0" width="574" style="border: none; margin-top: 30px; margin-bottom: 50px;" id="videobox"></iframe>
                 </div>
             </section><!-- .mobile-video -->
             <section class="homepage-about">

@@ -1,9 +1,9 @@
 /*--------------------------------------------------------------
 # Main Content Layout Classes
 --------------------------------------------------------------*/
-body.home {
-    background: #004080;
-}
+// body.home {
+//     background: #004080;
+// }
 
 .site-content {
     background-image: url( 'images/bg.jpg' );
@@ -32,6 +32,11 @@ body.home {
 }
 
 // HOMEPAGE
+.homepage-container {
+    padding: 20px 0;
+    text-align: center;
+}
+
 .homepage-map {
     display: none;
 }

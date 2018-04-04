@@ -1,13 +1,13 @@
 /*
-Theme Name: Forta Master
+Theme Name: Cold Storage 2 Go
 Theme URI: http://underscores.me/
 Author: John H for Delia Associates
 Author URI: http://www.johnswork.com,%20http://www.delianet.com
-Description: Parent theme for Forta Website s Family
+Description: Custom theme for Cold Storage 2 Go
 Version: 1.0.0
 License: GNU General Public License v2 or later
 License URI: LICENSE
-Text Domain: forta-master
+Text Domain: CS2GO
 Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready
 
 This theme, like WordPress, is licensed under the GPL.
@@ -892,10 +892,6 @@ a:active {
 /*--------------------------------------------------------------
 # Main Content Layout Classes
 --------------------------------------------------------------*/
-body.home {
-  background: #004080;
-}
-
 .site-content {
   background-image: url("images/bg.jpg");
   background-position: left top;
@@ -918,6 +914,11 @@ body.home {
   border-radius: 10px;
   margin: 0 0 20px 0;
   padding: 20px 15px;
+  text-align: center;
+}
+
+.homepage-container {
+  padding: 20px 0;
   text-align: center;
 }
 
@@ -1574,6 +1575,10 @@ object {
 }
 @media only screen and (min-width: 1024px) {
   .mobile-video {
+    display: none;
+  }
+
+  .homepage-container {
     display: none;
   }
 
