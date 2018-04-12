@@ -12,7 +12,6 @@
 ?>
 
 	</div><!-- #content -->
-
 	<footer id="colophon" class="site-footer">
 		<div class="constrain flexxed">
 			<div class="footer-logo">
@@ -38,7 +37,6 @@
 		</div><!-- .constrain -->
 	</footer><!-- #colophon -->
 </div><!-- #page -->
-
 <?php wp_footer(); ?>
 
 </body>

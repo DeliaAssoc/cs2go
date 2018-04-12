@@ -221,6 +221,16 @@ if( function_exists('acf_add_options_page') ) {
 		'menu_title'	=> 'Insulated',
 		'parent_slug'	=> 'theme-general-settings',
 	));
+
+	acf_add_options_page(array(
+		'page_title' 	=> 'Landing Page Options',
+		'menu_title'	=> 'Landing Page Options',
+		'menu_slug' 	=> 'landing-page-settings',
+		'capability'	=> 'edit_posts',
+		'icon_url'		=> 'dashicons-analytics',
+		'position'		=> 10,
+		'redirect'		=> true
+	));
 	
 }
 

@@ -258,6 +258,23 @@ th {
 /*--------------------------------------------------------------
 # Site Helper Classes
 --------------------------------------------------------------*/
+.site {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  min-height: 100vh;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.site-content {
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+
 .constrain {
   display: block;
   padding: 0 10px;
@@ -892,6 +909,11 @@ a:active {
 /*--------------------------------------------------------------
 # Main Content Layout Classes
 --------------------------------------------------------------*/
+.home .site-content {
+  background: #004080;
+  background-image: none;
+}
+
 .site-content {
   background-image: url("images/bg.jpg");
   background-position: left top;
@@ -1029,6 +1051,9 @@ a:active {
   text-align: center;
   text-transform: uppercase;
 }
+.product-list-item a {
+  overflow: hidden;
+}
 .product-list-item img {
   margin: 10px 0 0 0;
 }
@@ -1114,6 +1139,30 @@ a:active {
   border: none;
   display: inline-block;
   margin: 0 5px;
+}
+
+.slider {
+  display: block;
+  margin: 0 auto;
+  max-width: 450px;
+}
+
+.use-item {
+  background: #badaf3;
+  background: -moz-linear-gradient(top, #badaf3 0%, #badaf3 50%, #a1cef0 51%, #badaf3 100%);
+  background: -webkit-gradient(left top, left bottom, color-stop(0%, #badaf3), color-stop(50%, #badaf3), color-stop(51%, #a1cef0), color-stop(100%, #badaf3));
+  background: -webkit-linear-gradient(top, #badaf3 0%, #badaf3 50%, #a1cef0 51%, #badaf3 100%);
+  background: -o-linear-gradient(top, #badaf3 0%, #badaf3 50%, #a1cef0 51%, #badaf3 100%);
+  background: -ms-linear-gradient(top, #badaf3 0%, #badaf3 50%, #a1cef0 51%, #badaf3 100%);
+  background: linear-gradient(to bottom, #badaf3 0%, #badaf3 50%, #a1cef0 51%, #badaf3 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#badaf3', endColorstr='#badaf3', GradientType=0 );
+  border: 3px solid #004080;
+  border-radius: 10px;
+  font-size: 18px;
+  font-weight: 700;
+  margin: 0 0 20px 0;
+  padding: 20px 15px;
+  text-align: center;
 }
 
 .blog .entry-footer {
@@ -1340,6 +1389,32 @@ object {
   .quote-form .City, .quote-form .State, .quote-form .Zip {
     float: right;
     clear: right;
+  }
+
+  .uses .flexxed {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+  }
+
+  .use-item {
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    min-height: 98px;
+    width: 48%;
   }
 }
 /* Credits:
